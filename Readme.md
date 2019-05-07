@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Jullka](https://up.htmlacademy.ru/htmlcss/25/user/908775).
-* Наставник: `Максим Фарига`.
+* Наставник: [Максим Фарига](https://htmlacademy.ru/profile/maximfariga).
 
 ---
 
