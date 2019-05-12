@@ -10,19 +10,22 @@
 
   <header class="main-header">
     <nav class="main-navigation">
-      <img src="img/" width="100" height="50" alt="Логотип Gllacy Shop">
+      <a><img src="img/" width="100" height="50" alt="Логотип Gllacy Shop"></a>
       <ul class="site-navigation">
         <li><a href="#">Каталог</a></li>
         <li><a href="#">Дoставка и оплата</a></li>
         <li><a href="#">О компании</a></li>
       </ul>
       <ul class="user-navigation">
-        <li class="search"></li>
+        <li class="search"><span class="visually hidden">Поиск</span></li>
         <li class="login-link">Вход</li>
         <li class="basket">Пусто</li>
       </ul>
     </nav>
-    <p>С 10 до 20, ежедневно <span>812 450-25-25</span></p>
+    <p class="header-contacts">С 10 до 20, ежедневно
+        <span><a href="tel:+88124502525" class="main-header-tel">812 450-25-25</a>
+        </span>
+      </p>
   </header>
 
   <main class="container">
@@ -30,7 +33,7 @@
     <!-- Слайды -->
     <section class="main-features">
       <h2 class="visually hidden">Преимущества</h2>
-      <b>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</b>
+      <p class="fitures-item"><b>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</b></p>
       <ul class="features-list">
         <li>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и
           проверенных временем технологий.
@@ -46,31 +49,33 @@
         </li>
       </ul>
       <article class="news">
-        <h2>Новое в нашем блоге</h2>
-        <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
+        <h2 class="news-item">Новое в нашем блоге</h2>
+        <p class="news-list"><a href="#">10 способов сервировки фруктовых щербетов к столу</a></p>
       </article>
       <section class="subscription">
         <h2 class="visually hidden">Подписка</h2>
         <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит.
           Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
         <!-- Форма -->
-        <button>Отправить</button>
       </section>
     </section>
-    <section class="main-contacts">
+    <section class="main-conacts">
       <h2 class="visually hidden">Контакты</h2>
-      <p>Адрес главного офиса и офлайн-магазина:
-        <span>л. Большая Конюшенная 19/8, Санкт-Петербург</span>
+      <p>
+        <span class="main-contacts-item">Aдрес главного офиса и офлайн-магазина:</span>
+        <b class="main-contacts-list">yл. Большая Конюшенная 19/8, Санкт-Петербург</b>
+      </p>
+      <p>
         Для заказов по телефону:
-        <span>8 812 450-25-25</span>
-        (с 10 до 20 ежедневно)
+        <a href="tel:+88124502525" class="main-contacts-tel">8 812 450-25-25</a>
       </p>
     </section>
+       <!-- Карта -->
   </main>
 
   <footer>
     <div class="footer-social">
-      <ul>
+      <ul class="footer-social-list">
         <li><a class="social-button" href="#">Твиттер</a></li>
         <li><a class="social-button" href="#">Инстаграм</a></li>
         <li><a class="social-button" href="#">Фейсбук</a></li>
@@ -84,11 +89,14 @@
         <li><a href="#">Наши документы</a></li>
         <li><a href="#">Экологические стандарты</a></li>
       </ul>
+    </div>
+    <div class="copyright">
       <p class="footer-copyright">
-        <b>Сделано в HTML Academy © 2019</b>
-        <a href="https://htmlacademy.ru">HTML Academy</a>
+        <b>Сделано в <a href="https://htmlacademy.ru">Academy © 2019</a> </b>
+        <a href="https://htmlacademy.ru"><img src="img/" alt="Логотип HTMLAcademy" width="100" height="50"></a>
       </p>
     </div>
+
   </footer>
 
 </body>
