@@ -7,27 +7,77 @@
 </head>
 
 <body>
-  <header class="main-header">
-    <nav class="main-navigation">
-      <a href="index.html" class="main-logo"><img src="img/header/logo.svg" width="154" height="64" alt="Логотип Gllacy Shop"></a>
-      <ul class="site-navigation">
-        <li class="site-navigation-current"><a href="#">Каталог</a></li>
-        <li><a href="#">Дoставка и оплата</a></li>
-        <li><a href="#">О компании</a></li>
-      </ul>
+  <div class="container">
+    <header class="header">
+      <nav class="header-navigation">
+        <a class="header-logo-link"><img src="img/header/logo.svg" width="154" height="64" alt="Логотип Gllacy Shop"></a>
+        <ul class="site-navigation">
+          <li><a href="#">Каталог</a>
+                        <!-- Выпадающее главное меню -->
+            <ul class="main-menu popup">
+              <li class="main-menu-item"><a class="main-menu-link" href="#">Новинки</a></li>
+              <li class="main-menu-item"><a class="main-menu-link" href="catalog.html">Сливочное</a></li>
+              <li class="main-menu-item"><a class="main-menu-link" href="#">Щербеты</a></li>
+              <li class="main-menu-item"><a class="main-menu-link" href="#">Фруктовый лед</a></li>
+              <li class="main-menu-item"><a class="main-menu-link" href="#">Мелорин</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Дoставка и оплата</a></li>
+          <li><a href="#">О компании</a></li>
+        </ul>
+        <ul class="user-navigation">
+          <li class="user-search">
+            <a class="user-search-link" href="#"><span class="visually hidden">Поиск</span></a>
+                        <!-- Выпадающая форма поиска -->
+            <form class="user-search-form popup" method="post" action="https://echo.htmlacademy.ru">
+              <input class="user-search-input" type="search" name="search" placeholder="Что ищем?">
+            </form>
+          </li>
+          <li class="user-entry"><a class="entry-link" href="entry.html">Вход</a>
+                        <!-- Выпадающая форма входа -->
+            <form class="user-entry-form popup" method="post" action="https://echo.htmlacademy.ru">
+              <label class="visually-hidden" for="user-entry-email">Электронная почта</label>
+              <input id="user-entry-email" type="text" name="entry-email" placeholder="Электронная почта">
+              <label class="visually-hidden" for="user-entry-password">Пароль</label>
+              <input id="user-entry-password" type="password" name="entry-password" placeholder="Пароль">
+              <button type="submit">Войти</button>
+              <a class="entry-restore-link" href="#"><p>Забыли пароль?</p></a>
+              <a class="entry-registration-link" href="#"><p>Новая регистрация</p></a>
+            </form>
+          </li>
+          <li class="user-basket">
+            <a class="user-basket-link" href="#" aria-label="Корзина">2 товара</a>
+            <!-- Активная корзина -->
+          <div class="user-basket-active popup">
+              <ul class="user-basket-list">
+                <li class="user-basket-item">
+                    <button class="basket-delete-item" href="#" type="button">Удалить</button>
+                    <span class="basket-img"></span>
+                    <p class="basket-item">Пломбир с апельсиновым джемом</p>
+                    <p class="basket-weight-price">1,5 кг х 200 руб.</p>
+                    <p class="basket-cost">300pуб</p>
+                </li>
+                <li class="user-basket-item">
+                    <button class="basket-delete-item" href="#" type="button">Удалить</button>
+                    <span class="basket-img"></span>
+                    <p class="basket-item">Клубничный пломбир с присыпкой
+                        из белого шоколада</p>
+                    <p class="basket-weight-price">1,5 кг х 300 руб.</p>
+                    <p class="basket-cost">450pуб</p>
+                </li>
+              </ul>
+              <p class="user-basket-total">Итого: 750 руб</p>
+              <a class="user-basket-button" href="#">Оформить заказ</a>
 
-      <ul class="user-navigation">
-        <li class="search"><span class="visually-hidden">Поиск</span></li>
-        <li class="login-link">Вход</li>
-        <li class="basket">2 товара</li>
-      </ul>
-    </nav>
-    <p class="header-contacts">С 10 до 20, ежедневно
-      <a href="tel:+78124502525" class="tel">812 450-25-25</a>
-    </p>
-  </header>
-
-  <main class="container">
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <p class="header-contacts">С 10 до 20, ежедневно
+        <a href="tel:+88124502525" class="header-tel">812 450-25-25</a>
+        </p>
+    </header>
+  <main>
     <ol class="breadcrumbs">
       <li><a href="index.html">Главная</a></li>
       <li><a href="catalog.html">Каталог</a></li>
@@ -126,17 +176,18 @@
           <b class="catalog-price"><span class="catalog-curruncy">420 ₽</span>/кг</b>
         </li>
       </ul>
-      <!-- <ul class="pagination-list">
-        <li class="pagination-prev visually-hidden><a href="#">Назад</a></li>
+      <ul class="pagination-list">
+        <li class="pagination-prev><a href="#"><span class="visually-hidden">Назад</span></a></li>
         <li class="pagination-item pagination-item-current"><a>1</a></li>
         <li class="pagination-item"><a href="#">2</a></li>
         <li class="pagination-item"><a href="#">3</a></li>
         <li class="pagination-item"><a href="#">4</a></li>
         <li class="pagination-item"><a href="#">5</a></li>
-        <li><a href="#" class="next visually-hidden">Вперёд</a></li>
-      </ul> -->
+        <li class="pagination-next><a href="#"><span class="visually-hidden">Вперёд</span></a></li>
+      </ul>
     </section>
   </main>
+</div>
 
 
   <footer>
