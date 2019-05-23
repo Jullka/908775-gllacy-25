@@ -36,6 +36,10 @@ a {
   color: #ffffff;
 }
 
+.site-navigation {
+text-decoration: underline;
+}
+
 .user-navigation li {
   font-size: 14px;
   line-height: 16px;
@@ -55,6 +59,40 @@ a {
 .user-navigation a:focus {
   background-color: #ffffff;
   color: #323232;
+}
+
+.user-search {
+  width: 33px;
+  height: 33px;
+  background-color: #9db1a5;
+  border-radius: 50%;
+
+
+}
+.user-entry {
+  width: 92px;
+  height: 32px;
+  background-color: #9db1a5;
+  color: #ffffff;
+  border-radius: 14px;
+  margin-left: 10px;
+  margin-bottom: 4px;
+  padding: 8px 16px 8px 44px;
+}
+.user-basket {
+  width: 100px;
+  height: 32px;
+  background-color: #9db1a5;
+  color: #ffffff;
+  margin-left: 10px;
+  margin-bottom: 4px;
+  padding: 8px 16px 8px 44px;
+  border-radius: 14px;
+}
+
+.timetable a {
+  font-size: 22px;
+  line-height: 24px;
 }
 
 .main-features {
@@ -79,6 +117,9 @@ a {
   border-radius: 14px;
 }
 
+.subscription-info {
+  padding: 30px 20px 15px;
+}
 
 .news {
   background-image: url("img/bg/bg-raspberries.jpg");
@@ -94,14 +135,25 @@ a {
 
 .news-list a{
   color: #323232;
+  text-decoration: underline;
 }
 
 .subscription {
   color: #5a5a5a;
+
 }
 
+.subscription-form {
+
+}
 .map {
   height: 430px;
   width: 1250px;
-  background-image: url("img/")
+
+}
+
+.contacts {
+height: 220px;
+  width: 560px;
+  background: #ffffff;
 }
