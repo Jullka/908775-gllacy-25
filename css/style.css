@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 22px;
+  color: #ffffff;
+
+  background-color: #849d8f;
+}
+
+.dropdown, .popup, .visually-hidden {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-navigation {
+  line-height: 18px;
+  color: #ffffff;
+
+  background-color: #849d8f;
+}
+
+.site-navigation,
+.user-navigation {
+  list-style: none;
+}
+
+.site-navigation a,
+.user-navigation a {
+  color: #ffffff;
+}
+
+.user-navigation li {
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  font-weight: medium;
+
+  background-color: #9db1a5;
+}
+
+.header-tel {
+  color: #ffffff;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus {
+  background-color: #ffffff;
+  color: #323232;
+}
+
+.main-features {
+  background-image: url("img/feature/bg-waffle.jpg") repeat repeat;
+  background-size: cover;
+  border-radius: 13px;
+}
+
+.main-features p {
+  font-size: 24px;
+  line-height: 30px;
+}
+.features-list li {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.news, .subscription {
+  height: 220px;
+  width: 560px;
+  background-color: #ffffff;
+  border-radius: 14px;
+}
+
+
+.news {
+  background-image: url("img/bg/bg-raspberries.jpg");
+  color: #323232;
+  padding: 25px 100px 25px 20px;
+}
+
+.news h2 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.news-list a{
+  color: #323232;
+}
+
+.subscription {
+  color: #5a5a5a;
+}
+
+.map {
+  height: 430px;
+  width: 1250px;
+  background-image: url("img/")
+}
