@@ -17,7 +17,7 @@
             <img src="img/header/logo.svg" width="154" height="64" alt="Логотип Gllacy Shop">
           </a>
           <ul class="main-nav-list">
-              <li class="main-nav-item"><a class="main-nav-link" href="#"><span class="nav-border-link">Каталог</span></a>
+              <li class="main-nav-item"><a class="main-nav-link" href="#">Каталог</a>
                 <!-- Выпадающее главное меню -->
                   <ul class="main-menu dropdown">
                     <li class="main-menu-item"><a class="main-menu-link" href="#">Новинки</a></li>
@@ -27,8 +27,8 @@
                     <li class="main-menu-item"><a class="main-menu-link" href="#">Мелорин</a></li>
                   </ul>
               </li>
-              <li class="main-nav-item"><a class="main-nav-link" href="#"><span class="nav-border-link">Дoставка и оплата</span></a></li>
-              <li class="main-nav-item"><a class="main-nav-link" href="#"><span class="nav-border-link">О компании</span></a></li>
+              <li class="main-nav-item"><a class="main-nav-link" href="#">Дoставка и оплата</a></li>
+              <li class="main-nav-item"><a class="main-nav-link" href="#">О компании</a></li>
           </ul>
       </nav>
       <div class="search">
@@ -69,7 +69,31 @@
 
     <main>
       <h1 class="visually-hidden">Магазин мороженого Глейси</h1>
-      <!-- Слайды -->
+      <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+      <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+      <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+      <section class="slider">
+        <h2 class="visually-hidden">Самые вкусные сочетания</h2>
+        <div class="slider-controls">
+          <label for="product-1">Первый</label>
+          <label for="product-2">Второй</label>
+          <label for="product-3">Третий</label>
+        </div>
+        <ul class="slider-list">
+          <li class="slider-item slide" id="slide1">
+              <h3 class="slide-title">Крем-брюле и пломбир с малиновым джемом</h3>
+              <a class="button slide-button" href="#">Давайте оба!</a>
+          </li>
+          <li class="slider-item slide" id="slide2">
+              <h3 class="slide-title">Шоколадный пломбир и лимонный сорбет</h3>
+              <a class="button slide-button" href="#">Давайте оба!</a>
+          </li>
+          <li class="slider-item slide" id="slide3">
+              <h3 class="slide-title">Пломбир с помадкой и клубничный щербет</h3>
+              <a class="button slide-button" href="#">Давайте оба!</a>
+          </li>
+        </ul>
+      </section>
       <section class="features">
         <div class="features-wrapper">
           <h2 class="visually-hidden">Преимущества магазина Глейси</h2>
@@ -77,19 +101,19 @@
               производства на развес</b></p>
           <ul class="features-list">
             <li class="features-item features-item-ice">
-              <p class="features-discription">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования
+              <p class="features-description">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования
               и проверенных временем технологий.</p>
             </li>
             <li class="features-item features-item-cow">
-              <p class="features-discription">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас
+              <p class="features-description">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас
               связывает долговременное сотрудничество.</p>
             </li>
             <li class="features-item features-item-leaf">
-              <p class="features-discription">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все
+              <p class="features-description">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все
               дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
             </li>
             <li class="features-item features-item-thermometer">
-              <p class="features-discription">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает
+              <p class="features-description">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает
               мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
             </li>
           </ul>
@@ -108,7 +132,7 @@
                 Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
               </label>
               <form class="subscription-form" method="post" action="https://echo.htmlacademy.ru">
-                <input type="email" name="email-for-subscription" class="subscription-email" placeholder="Электронная почта" aria-label="Ваша электронная почта">
+                <input class="subscription-email" type="email" name="email-for-subscription"  placeholder="Электронная почта" aria-label="Ваша электронная почта">
                 <button class="subscription-submit-btn button" type="submit">Отправить</button>
               </form>
             </div>
@@ -122,12 +146,13 @@
     <h2 class="visually-hidden">Месторасположение магазина Глейси на карте</h2>
       <img class="map-img" src="img/map/map-marker.jpg" alt="ул. Большая Конюшенная 19/8, Санкт-Петербург">
       <div class="contacts">
-        <p class="contacts-type">Aдрес главного офиса</p>
-        <p class="contacts-type">и офлайн-магазина:</p>
+        <p class="contacts-item">Aдрес главного офиса и офлайн-магазина:</p>
         <p class="contacts-address">yл. Большая Конюшенная 19/8, Санкт-Петербург</p>
-        <p class="contacts-type">Для заказов по телефону:</p>
-        <p class="contacts-tel"><a href="tel:+88124502525">8 812 450-25-25</a></p>
-        <p class="contacts-type">(с 10 до 20 ежедневно)</p>
+        <p class="contacts-item">
+          Для заказов по телефону:
+          <a class="contacts-tel" href="tel:+88124502525">8 812 450-25-25</a>
+          <span>(с 10 до 20 ежедневно)</span>
+        </p>
         <a class="contacts-btn button" href="#">Форма обратной связи</a>
       </div>
   </section>
@@ -153,7 +178,7 @@
           <a href="https://htmlacademy.ru"><img src="img/footer/logo-htmlacademy.svg" alt="Логотип HTMLAcademy"
               width="108" height="39"></a>
         </li>
-        <li class="copyright-item"><b>Сделано в <a href="https://htmlacademy.ru">Academy © 2019</a> </b>
+        <li class="copyright-item"><b>Сделано в <a href="https://htmlacademy.ru"><span class="copyright-link-border">HTML Academy</span> © 2019</a> </b>
         </li>
       </ul>
     </footer>
