@@ -45,9 +45,9 @@
             <div class="dropdown">
               <form class="entry-form" method="post" action="https://echo.htmlacademy.ru">
                 <label class="visually-hidden" for="user-entry-email">Электронная почта</label>
-                <input id="user-entry-email" type="email" name="entry-email" placeholder="Электронная почта">
+                <input class="entry-email input-text" type="email" name="entry-email" placeholder="Электронная почта">
                 <label class="visually-hidden" for="user-entry-password">Пароль</label>
-                <input id="user-entry-password" type="password" name="entry-password" placeholder="Пароль">
+                <input class="entry-password input-text" type="password" name="entry-password" placeholder="Пароль">
                 <button class="entry-btn button" type="submit">Войти</button>
                 <p class="entry-restore-registration">
                   <a href="#">Забыли пароль?</a>
@@ -132,7 +132,7 @@
                 Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
               </label>
               <form class="subscription-form" method="post" action="https://echo.htmlacademy.ru">
-                <input class="subscription-email" type="email" name="email-for-subscription"  placeholder="Электронная почта" aria-label="Ваша электронная почта">
+                <input class="subscription-email input-text" type="email" name="email-for-subscription"  placeholder="Электронная почта" aria-label="Ваша электронная почта">
                 <button class="subscription-submit-btn button" type="submit">Отправить</button>
               </form>
             </div>
@@ -192,13 +192,13 @@
       <button class="feed-back-close-btn button" type="button" href="#"><span class="visually-hidden">Закрыть форму обратной связи</span></button>
       <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru">
         <label class="visually-hidden" for="feedback-name">Имя пользователя</label>
-        <input type="text" id="feedback-name" name="feedback-name" placeholder="Как вас зовут?"
+        <input class="feedback-name input-text" type="text" name="feedback-name" placeholder="Как вас зовут?"
           aria-label="Как вас зовут?">
         <label class="visually-hidden" for="feedback-email">Почта пользователя</label>
-        <input type="email" id="feedback-email" name="feedback-email" placeholder="Ваша почта для ответа?"
+        <input class="feedback-email input-text" type="email"  name="feedback-email" placeholder="Ваша почта для ответа?"
           aria-label="Ваша почта для ответа?">
         <label class="visually-hidden" for="feedback-text">Ваше сообщение</label>
-        <textarea id="feedback-text"  name="feedback-text" placeholder="Напишите что-нибудь..."></textarea>
+        <textarea class="feedback-text"  name="feedback-text" placeholder="Напишите что-нибудь..."></textarea>
         <button class="feedback-submit-btn button" type="submit">Отправить</button>
       </form>
     </div>

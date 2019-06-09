@@ -1,56 +1,88 @@
   body {
     margin: 0;
     padding: 0;
+
     font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
-    font-weight: 500;
     line-height: 22px;
-    color: rgb(255, 255, 255);
-    background-color: rgb(132, 157, 143);
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+
+    background-color: rgba(132, 157, 143, 1);
   }
 
- .visually-hidden {
+
+  a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+  }
+
+
+  .visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
     margin: -1px;
     padding: 0;
+
     border: 0;
     clip: rect(0 0 0 0);
     overflow: hidden;
   }
 
-  .dropdown, .popup {
-    display: none;
+
+  .dropdown {
+    background-color: rgba(248, 247, 244, 1)
   }
 
-  a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
+
+  .input-text {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: rgba(153, 153, 153, 1);
+
+    border: 1px solid rgba(178, 178, 178, 0.52);
+    outline: none;
   }
+
+
+  .input-text:hover {
+    border: 2px solid rgba(174, 174, 174, 0.52);
+  }
+
+
+  .input-text:focus,
+  .input-text:active {
+    border: 2px solid rgba(46, 136, 228, 0.52);
+  }
+
 
   .button {
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
 
-    background: #f26843;
-    background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+    background: rgba(242, 104, 67, 1);
+    background: linear-gradient(to bottom, rgba(242, 104, 67, 1) 0%, rgba(231, 74, 53, 1) 100%);
     border-radius: 50px;
     box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
     border: none;
   }
 
+
   .button:focus,
   .button:hover {
-    background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+    background: linear-gradient(to bottom, rgb(245, 134, 105, 1) 0%, rgba(236, 111, 94, 1) 100%);
     box-shadow: 0 2px 2px rgba(172, 16, 0,1);
   }
+
 
   .button:active {
     background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
     box-shadow: inset 0 2px 2px rgba(172, 16, 0,1);
   }
+
 
   .main-nav-list {
     line-height: 18px;
@@ -59,41 +91,79 @@
     list-style: none;
   }
 
+
   .main-nav-link {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
 
+
   .main-nav-link:focus,
   .main-nav-link:hover {
-    background-color: rgb(247, 246, 243);
     font-weight: 700;
-    color: rgb(50, 50, 50);
+    color: rgba(50, 50, 50, 1);
+
+    background-color: rgba(247, 246, 243, 1);
   }
+
 
   .main-nav-link:active {
-    background-color: rgb(237, 237, 237);
-    box-shadow: inset 0 2px 1px rgb (105, 105. 105);
-    color: rgb(50, 50, 50);
+    color: rgba(50, 50, 50, 1);
+
+    background-color: rgba(237, 237, 237, 1);
+    box-shadow: inset 0 2px 1px rgba(105, 105. 105, 1);
   }
 
+
   .main-nav-link-current {
-    background-color: rgb(208, 112, 88);
+    background-color: rgba(208, 112, 88, 1);
     border: 0;
   }
 
+
+  .main-menu {
+    list-style: none;
+  }
+
+
+  .main-menu:first-child li {
+    font-weight: 700;
+  }
+
+
+  .main-menu-link {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400px;
+    color: rgba(50, 50, 50, 1);
+  }
+
+
+  .main-menu-link:focus,
+  .main-menu-link:hover {
+    background-color: rgba(251, 222, 215, 1);
+  }
+
+
+  .main-menu-link:active {
+    background-color: rgba(246, 181, 165, 1);
+  }
+
+
   .search-link {
-    background-color: rgba(255,255,255, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
 
     font-size: 14px;
     line-height: 16px;
   }
 
+
   .search-link:focus,
   .search-link:hover {
-    color: rgb(50, 50, 50);
+    color: rgba(50, 50, 50, 1);
 
-    background-color: rgb(248, 247, 244);
+    background-color: rgba(248, 247, 244, 1);
   }
+
 
   .entry-link {
     font-size: 14px;
@@ -102,30 +172,78 @@
     background-color: rgba(255,255,255, 0.2);
   }
 
+
   .entry-link:focus,
   .entry-link:hover {
-    color: rgb(50, 50, 50);
+    color: rgba(50, 50, 50, 1);
 
-    background-color: rgb(248, 247, 244);
+    background-color: rgba(248, 247, 244, 1);
   }
 
 
   .basket-link {
-    background-color: rgba(255,255,255, 0.2);
-
     font-size: 14px;
     line-height: 16px;
+
+    background-color: rgba(255,255,255, 0.2);
   }
+
+
+  .entry-btn {
+    color: inherit;
+  }
+
+
+  .entry-restore-registration a {
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 700;
+    color: rgba(50, 50, 50, 1);
+
+    border-bottom: 1px solid rgba(50, 50, 50, 0,3);
+
+  }
+
 
   .basket-link:focus,
   .basket-link:hover,
   .basket-link-current,
   .basket-link-current:focus,
   .basket-link-current:hover {
-    color: rgb(50, 50, 50);
+    color: rgba(50, 50, 50, 1);
 
-    background-color: rgb(248, 247, 244);
+    background-color: rgba(248, 247, 244, 1);
   }
+
+
+  .basket-delete-item-btn {
+    font-size: 0;
+    line-height: 0;
+
+    box-shadow: none;
+  }
+
+
+  .basket-list {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: rgba(50, 50, 50, 1);
+  }
+
+
+  .basket-price {
+    color: rgba(153, 153, 153, 1);
+  }
+
+
+  .basket-total {
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 700;
+    color: rgba(50, 50, 50, 1);
+  }
+
 
   .timetable-opening {
   font-size: 14px;
@@ -133,19 +251,23 @@
   font-weight: 700;
   }
 
+
   .timetable a {
     font-size: 22px;
     line-height: 24px;
     font-weight: 700;
   }
 
+
   .slider-controls {
     font-size: 0;
   }
 
+
   .slider-list {
     list-style: none;
   }
+
 
   .slide-title {
     font-size: 60px;
@@ -153,88 +275,86 @@
     font-weight: 700;
   }
 
+
   .slide-button {
     font-size: 32px;
     line-height: 44px;
     font-weight: 700;
   }
 
+
   .features {
-    background: rgb(238, 226, 198) url(../img/feature/bg-waffle.jpg);
+    background: rgba(238, 226, 198, 1) url(../img/feature/bg-waffle.jpg);
   }
+
 
   .features-title {
     font-size: 24px;
     line-height: 30px;
-    color: rgb(50, 50, 50);
+    color: rgba(50, 50, 50, 1);
   }
+
 
   .features-list {
     line-height: 22px;
     font-weight: 400;
-    color: rgb(50, 50, 50);
+    color: rgba(50, 50, 50, 1);
 
     list-style: none;
   }
 
+
   .blog {
-    background: rgb(248, 247, 244) url(../img/bg/bg-strawberries.jpg);
+    background: rgba(248, 247, 244, 1) url(../img/bg/bg-strawberries.jpg);
   }
 
+
   .subscription-wrapper {
-    background-color: rgb(248, 247, 244);
+    background-color: rgba(248, 247, 244, 1);
   }
 
   .blog-title {
     line-height: 22px;
     font-weight: 400;
-    color: rgb(50, 50, 50);
+    color: rgba(50, 50, 50, 1);
   }
+
 
   .blog-item a {
     font-size: 24px;
     line-height: 30px;
     font-weight: 400;
-    color: rgb(50, 50, 50);
+    color: rgba(50, 50, 50, 1);
+
     text-decoration: underline;
+  }
+
+
+  .subscription-submit-btn {
+    color: rgba(255, 255, 255, 1);
   }
 
   .subscription-info {
     line-height: 22px;
     font-weight: 400;
-    color: rgb(50, 50, 50);
+    color: rgba(50, 50, 50, 1);
   }
 
-  .subscription-email {
-    line-height: 24px;
-    font-weight: 400;
-    color: rgb(153, 153, 153);
-    border: 1px solid rgba(178, 178, 178, 0.5);
-  }
-
-  .subscription-email:hover {
-    border: 2px solid rgba(174, 174, 174, 0.5);
-  }
-
-  .subscription-email:focus,
-  .subscription-email:active {
-    border: 2px solid rgba(46, 136, 228, 0.5);
-  }
-
-  .subscription-submit-btn {
-    color: rgb(255, 255, 255);
-  }
 
   .map {
     font-size: 14px;
     line-height: 20px;
     font-weight: 400;
-    color: rgb(50, 50, 50);
+    color: rgba(214, 202, 202, 1);
   }
 
+
   .contacts {
-    background-color: rgb(254, 254, 253);
+    color: rgba(50, 50, 50, 1);
+
+    background-color: rgba(254, 254, 253, 1);
   }
+
 
   .contacts-address {
     font-size: 18px;
@@ -255,9 +375,11 @@
     font-weight: 400;
   }
 
+
   .breadcrumbs {
     list-style: none;
   }
+
 
   .breadcrumbs-item {
     font-size: 14px;
@@ -272,21 +394,26 @@
     font-weight: 700;
   }
 
+
   .bread-crumbs-link {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
+
 
   .bread-crumbs-link-current {
     border-bottom: 0;
   }
 
+
   .products-list {
     list-style: none;
   }
 
+
   .products-info:hover {
-    background-color: rgb(155, 175, 163);
+    background-color: rgba(155, 175, 163, 1);
   }
+
 
   .products-cost {
     font-size: 45px;
@@ -294,44 +421,53 @@
     font-weight: 700;
   }
 
+
   .products-link-border {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
+
 
   .footer {
     font-weight: 400;
     line-height: 18px;
   }
 
-  .footer-social {
 
+  .footer-social {
     list-style: none;
   }
 
+
   .social-link {
     display: inline-block;
-
     height: 32px;
     width: 32px;
-    background-color: rgb(230, 235, 233);
+
+    background-color: rgba(230, 235, 233, 1);
+
     border: 3px solid rgba(255, 255, 255, 0.5);
   }
+
 
   .social-link-twitter {
     background-image: url(../img/footer/icon-twitter.svg);
 }
 
+
   .social-link-instagram {
     background-image: url(../img/footer/icon-instagram.svg);
 }
+
 
   .social-link-fb {
     background-image: url(../img/footer/icon-fb.svg);
 }
 
+
   .social-link-vk {
     background-image: url(../img/footer/icon-vk.svg);
 }
+
 
   .footer-info {
     font-size: 13px;
@@ -339,18 +475,22 @@
     list-style: none;
   }
 
+
   .footer-info a {
     border-bottom: 1px solid rgba(255,255,255, 0.2);
   }
+
 
   .copyright {
     list-style: none;
   }
 
+
   .copyright-item {
     font-size: 12px;
   }
 
+  
   .copyright-link-border {
     border-bottom: 1px solid rgba(255,255,255, 0.2);
   }
