@@ -62,7 +62,7 @@
       <div class="header-wrapper">
         <p class="timetable">
           <span class="timetable-opening">С 10 до 20, ежедневно</span>
-          <a href="tel:+88124502525" class="timetable-tel">812 450-25-25</a>
+          <a class="timetable-tel" href="tel:+88124502525" >812 450-25-25</a>
         </p>
       </div>
     </header>
@@ -94,6 +94,76 @@
           </li>
         </ul>
       </section>
+      <section class="banners">
+          <h2 class="visually-hidden">Лучшие предложения</h2>
+          <ul class="banners-list">
+            <li class="banner-item">
+              <div class="banner-rasberries">
+                <h3 class="banners-title">Малинка даром!</h3>
+                <p class="banner-info">При покупке 2кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+                <a class="banner-link button" href="#">Хочу варенье!</a>
+              </div>
+            </li>
+            <li class="banner-item">
+              <div class="banner-chocolate">
+                <h3 class="banners-title">Шоколадки даром!</h3>
+                <p class="banner-info">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+                <a class="banner-link button" href="#">Хочу шоколадки!</a>
+              </div>
+            </li>
+          </ul>
+      </section>
+      <section class="hits">
+        <h2 class="visually-hidden">Популярное мороженое</h2>
+          <ul class="hits-list products-list">
+
+              <li class="hits-item products-item">
+                <div class="products-info">
+                  <img class="products-img" src="img/items/item1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                  <p class="products-cost">310<span class="rouble">₽</span></p>
+                    <a class="products-link link" href="#"><span class="products-link-border">Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a>
+                    <div class="products-substrate">
+                      <a class="products-button button" href="#">Добавить в корзину</a>
+                    </div>
+                </div>
+              </li>
+              <li class="hits-item products-item">
+                <div class="products-info">
+                    <img class="products-img" src="img/items/item2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+                    <p class="products-cost">380<span class="rouble"> ₽</span></p>
+                      <a class="products-link link" href="#">
+                        <span class="products-link-border">Сливочно-кофейное с кусочками шоколада</span>
+                      </a>
+                      <div class="products-substrate">
+                        <a class="products-button button" href="#">Добавить в корзину</a>
+                      </div>
+                </div>
+              </li>
+              <li class="hits-item products-item">
+                    <div class="products-info">
+                        <img class="products-img" src="img/items/item3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+                        <p class="products-cost">355<span class="rouble">₽</span></p>
+                          <a class="products-link link" href="#">
+                            <span class="products-link-border">Сливочно-клубничное с присыпкой из белого шоколада</span>
+                          </a>
+                          <div class="products-substrate">
+                            <a class="products-button button" href="#">Добавить в корзину</a>
+                          </div>
+                    </div>
+              </li>
+              <li class="hits-item products-item">
+                      <div class="products-info">
+                          <img class="products-img" src="img/items/item4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+                          <p class="products-cost">415<span class="rouble">₽</span></p>
+                            <a class="products-link link" href="#">
+                              <span class="products-link-border">Сливочное крем-брюле с карамельной подливкой</span>
+                            </a>
+                            <div class="products-substrate">
+                              <a class="products-button button" href="#">Добавить в корзину</a>
+                            </div>
+                      </div>
+              </li>
+      </section>
       <section class="features">
         <div class="features-wrapper">
           <h2 class="visually-hidden">Преимущества магазина Глейси</h2>
@@ -122,7 +192,7 @@
       <div class="news">
         <article class="blog">
           <h2 class="blog-title">Новое в нашем блоге</h2>
-          <p class="blog-item"><a href="#">10 способов сервировки фруктовых щербетов к столу</a></p>
+          <a class="blog-link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
         </article>
         <section class="subscription">
           <h2 class="visually-hidden">Подписка на новости магазина Глейси</h2>
@@ -168,8 +238,8 @@
       </ul>
       <ul class="footer-info">
         <li class="footer-info-title"><a href="#">Для поставщиков</a></li>
-        <li class="footer-info-title"><a href="#">О производстве</a></li>
         <li class="footer-info-title"><a href="#">Наши документы</a></li>
+        <li class="footer-info-title"><a href="#">О производстве</a></li>
         <li class="footer-info-title"><a href="#">Экологические стандарты</a></li>
       </ul>
       <ul class="copyright">
@@ -185,12 +255,11 @@
   </div>
 
   <!-- Форма обратной связи -->
-  <section class="popup">
-    <div class="popup-inner">
+    <div class="overlay dropdown">
+      <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru"></form>
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <p class="feedback-item">Мы обязательно ответим вам!</p>
       <button class="feed-back-close-btn button" type="button" href="#"><span class="visually-hidden">Закрыть форму обратной связи</span></button>
-      <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru">
         <label class="visually-hidden" for="feedback-name">Имя пользователя</label>
         <input class="feedback-name input-text" type="text" name="feedback-name" placeholder="Как вас зовут?"
           aria-label="Как вас зовут?">
@@ -202,7 +271,6 @@
         <button class="feedback-submit-btn button" type="submit">Отправить</button>
       </form>
     </div>
-  </section>
 </body>
 
 </html>
