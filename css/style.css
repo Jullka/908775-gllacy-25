@@ -1,3 +1,8 @@
+
+  * {
+    box-sizing: border-box;
+   }
+
   body {
     margin: 0;
     padding: 0;
@@ -10,7 +15,6 @@
 
     background-color: rgba(132, 157, 143, 1);
   }
-
 
   a {
     text-decoration: none;
