@@ -17,7 +17,7 @@
     font-size: 16px;
     line-height: 22px;
     font-weight: 500;
-    color: rgba(255, 255, 255, 1);
+    color: rgb(255, 255, 255);
 
     background-color: rgb(132, 157, 143);
   }
@@ -108,7 +108,7 @@
 
 
   .button:active {
-    background: linear-gradient(to bottom, rgb(216, 71, 50) 0%, #e1613e 100%);
+    background: linear-gradient(to bottom, rgb(216, 71, 50) 0%, rgb(225, 97, 62) 100%);
     box-shadow: inset 0 2px 2px rgba(172, 16, 0.1);
   }
 
@@ -209,6 +209,7 @@
   }
 
   .search-link {
+    padding: 0;
     font-size: 0px;
     border-radius: 50%;
   }
@@ -234,9 +235,6 @@
 
   .basket {
     margin: 0 0 4px 10px;
-  }
-
-  .basket-link {
   }
 
 
@@ -293,7 +291,7 @@
   .header-wrapper {
     margin: auto 0 5px;
     display: flex;
-    flex-basis: 1146px;
+    flex-basis: 100%;
     align-items: center;
   }
 
@@ -352,7 +350,6 @@
     padding: 0;
     margin: 0;
     display: flex;
-    width: 100%;
     justify-content: space-between;
 
 
@@ -361,27 +358,20 @@
 
   .banner-rasberries {
     padding: 20px;
+
+    background: rgb(193, 42, 80) url(../img/bg/bg-raspberries.jpg);
     border-radius: 15px;
   }
 
 .banner-chocolate {
   padding: 20px;
+
+  background: rgb(54, 27, 15) url(../img/bg/bg-chocolate.jpg);
   border-radius: 15px;
 }
 
   .banner-item {
-    margin: 0;
-    padding: 0;
     flex-basis: 560px;
-  }
-
-
-  .banner-rasberries {
-    background: rgb(193, 42, 80) url(../img/bg/bg-raspberries.jpg);
-  }
-
-  .banner-chocolate {
-  background: rgb(54, 27, 15) url(../img/bg/bg-chocolate.jpg);
   }
 
   .banners-title {
@@ -414,16 +404,16 @@
 
     display: flex;
     flex-wrap: wrap;
-    width: 1146px;
-    justify-content: space-between;
+
+    /* justify-content: space-between; */
+    text-align: center;
 
     list-style: none;
   }
 
 .products-item {
-
   padding: 0;
-  margin: 0;
+  margin: auto;
   flex-basis: 267px;
 
 }
@@ -453,57 +443,45 @@
 
   .features {
     margin: 0 0 40px;
-    border-radius: 15px;
+    padding: 30px 20px;
 
     background: rgb(238, 226, 198);
-  }
-
-
-  .features-wrapper {
-    padding: 30px 0 30px;
     background-image: url(../img/feature/bg-waffle.jpg);
     border-radius: 15px;
   }
 
   .features-title {
-    margin: 0 20px;
+    margin: 0;
 
     font-size: 24px;
     line-height: 30px;
-    color: rgba(50, 50, 50, 1);
+    color: rgb(50, 50, 50);
   }
 
 
   .features-list {
     margin: 0;
-    padding: 0 21px;
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
-    width: 1146px;
     justify-content: space-between;
 
     line-height: 22px;
     font-weight: 400;
-    color: rgba(50, 50, 50, 1);
+    color: rgb(50, 50, 50);
 
     list-style: none;
   }
 
   .features-item {
-    margin: 0;
-    padding: 0;
-    flex-basis: 539px;
+    margin: 10px 0 0 0;
+    padding: 0 0 0 57px;
+    flex-basis: 530px;
   }
-
-  .features-description {
-    padding-left: 57px;
-}
 
  .news {
     margin: 0 0 40px;
     display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
     justify-content: space-between;
   }
 
@@ -573,7 +551,6 @@
 
   .map {
     position: relative;
-    padding: 62px 0;
     overflow: hidden;
 
 
@@ -587,7 +564,6 @@
   .map-img {
     position: absolute;
     z-index: -1;
-    width: 100%;
   }
   .contacts {
     margin: 63px 0 63px 842px;
@@ -632,11 +608,9 @@
   }
 
   .footer {
-    margin: 0;
     padding: 18px 0 25px;
     display: flex;
     align-items: center;
-    width: 1146px;
     justify-content: space-between;
 
     font-weight: 400;
@@ -729,7 +703,7 @@
   }
 
   .breadcrumbs {
-    margin: 0;
+    margin: -20px 0 0 0;
     padding: 0;
     display: flex;
     align-items: center;
@@ -751,14 +725,6 @@
     font-weight: 700;
   }
 
-
-  .breadcrumbs-link {
-  }
-
-
   .breadcrumbs-link-current {
     border-bottom: 0;
-  }
-
-  .catalog {
   }
