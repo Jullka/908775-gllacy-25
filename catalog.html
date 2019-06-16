@@ -17,15 +17,19 @@
               <img src="img/header/logo.svg" width="154" height="64" alt="Логотип Gllacy Shop">
             </a>
             <ul class="main-nav-list">
-                <li class="main-nav-item"><a class="main-nav-link main-nav-link-current" href="#">Каталог</a>
-                  <!-- Выпадающее главное меню -->
-                    <ul class="main-menu dropdown">
-                      <li class="main-menu-item"><a class="main-menu-link" href="#">Новинки</a></li>
-                      <li class="main-menu-item"><a class="main-menu-link" href="catalog.html">Сливочное</a></li>
-                      <li class="main-menu-item"><a class="main-menu-link" href="#">Щербеты</a></li>
-                      <li class="main-menu-item"><a class="main-menu-link" href="#">Фруктовый лед</a></li>
-                      <li class="main-menu-item"><a class="main-menu-link" href="#">Мелорин</a></li>
-                    </ul>
+                <li class="main-nav-item">
+                  <div class="main-menu-wrapper">
+                    <a class="main-nav-link main-nav-link-current" href="#">Каталог
+                    </a>
+                    <!-- Выпадающее главное меню -->
+                      <ul class="main-menu dropdown">
+                        <li class="main-menu-item"><a class="main-menu-link" href="#">Новинки</a></li>
+                        <li class="main-menu-item"><a class="main-menu-link" href="catalog.html">Сливочное</a></li>
+                        <li class="main-menu-item"><a class="main-menu-link" href="#">Щербеты</a></li>
+                        <li class="main-menu-item"><a class="main-menu-link" href="#">Фруктовый лед</a></li>
+                        <li class="main-menu-item"><a class="main-menu-link" href="#">Мелорин</a></li>
+                      </ul>
+                      </div>
                 </li>
                 <li class="main-nav-item"><a class="main-nav-link" href="#"><span class="border-link">Дoставка и оплата</span></a></li>
                 <li class="main-nav-item"><a class="main-nav-link" href="#"><span class="border-link">О компани</span></a></li>
@@ -42,23 +46,44 @@
           <a class="entry-link link-dropdown" href="entry.html">Вход <span class="visually-hidden">на сайт</span>
           </a>
               <!-- Выпадающая форма входа -->
-              <div class="dropdown">
-                <form class="entry-form" method="post" action="https://echo.htmlacademy.ru">
-                  <label class="visually-hidden" for="user-entry-email">Электронная почта</label>
-                  <input class="entry-email input-text" type="email" name="entry-email" placeholder="Электронная почта">
-                  <label class="visually-hidden" for="user-entry-password">Пароль</label>
-                  <input class="entry-password input-text" type="password" name="entry-password" placeholder="Пароль">
-                  <button class="entry-btn button" type="submit">Войти</button>
-                  <p class="entry-restore-registration">
-                    <a href="#">Забыли пароль?</a>
-                    <a href="#">Новая регистрация</a>
-                  </p>
-                </form>
-              </div>
+          <form class="entry-form dropdown" method="post" action="https://echo.htmlacademy.ru">
+            <label class="visually-hidden" for="user-entry-email">Электронная почта</label>
+            <input class="entry-email input-text" type="email" name="entry-email" placeholder="Электронная почта">
+            <label class="visually-hidden" for="user-entry-password">Пароль</label>
+            <input class="entry-password input-text" type="password" name="entry-password" placeholder="Пароль">
+            <button class="entry-btn button" type="submit">Войти</button>
+            <p class="entry-restore-registration">
+              <a href="#">Забыли пароль?</a>
+              <a href="#">Новая регистрация</a>
+            </p>
+          </form>
         </div>
         <div class="basket">
               <a class="basket-link link-dropdown" href="#" aria-label="Корзина">2 товара</a>
-        </div>
+              <table class="basket-dropdown dropdown">
+                  <tr class="basket-list">
+                    <td class="basket-delete-item"><a href="#">Удалить выбранный продукт</a></td>
+                    <td class="basket-img basket-img-first"></td>
+                    <td class="basket-item">Пломбир с апельсиновым джемом</td>
+                    <td class="basket-weight-price">1,5 кг х<span class="basket-price">200 руб.</span></td>
+                    <td class="basket-cost">300pуб</td>
+                  </tr>
+                  <tr class="basket-list basket-border">
+                    <td><a class="basket-delete-item" href="#">Удалить выбранный продукт</a></td>
+                    <td><span class="basket-img"></span></td>
+                    <td><p class="basket-item">Клубничный пломбир с присыпкой из белого шоколада</p></td>
+                    <td class=""><p class="basket-weight-price">1,5 кг х<span class="basket-price">300 руб.</span></p></td>
+                    <td ><p class="basket-cost">450pуб</p></td>
+                  </tr>
+                  <tr>
+                    <td class="basket-total" colspan="5">Итого: 750 руб</td>
+                  </tr>
+                  <tr>
+                    <td class="basket-btn button" colspan="5"><a href="#">Оформить заказ</a></td>
+                  </tr>
+              </table>
+
+            </div>
         <div class="header-wrapper">
           <p class="timetable">
             <span class="timetable-opening">С 10 до 20, ежедневно</span>
@@ -67,28 +92,7 @@
         </div>
 
           <!-- Активная корзина -->
-          <div class="dropdown">
-            <table class="basket-dropdown dropdown">
-                <tr class="basket-list">
-                  <td><button class="basket-delete-item-btn button" type="button">Удалить</button></td>
-                  <td><span class="basket-img"></span></td>
-                  <td><p class="basket-item">Пломбир с апельсиновым джемом</p></td>
-                  <td><p class="basket-weight-price">1,5 кг х<span class="basket-price">200 руб.</span></p></td>
-                  <td><p class="basket-cost">300pуб</p></td>
-                </tr>
-                <tr class="basket-list">
-                  <td><button class="basket-delete-item-btn button" type="button">Удалить</button></td>
-                  <td><span class="basket-img"></span></td>
-                  <td><p class="basket-item">Клубничный пломбир с присыпкой из белого шоколада</p></td>
-                  <td><p class="basket-weight-price">1,5 кг х<span class="basket-price">300 руб.</span></p></td>
-                  <td><p class="basket-cost">450pуб</p></td>
-                </tr>
-                <tr>
-                  <td><p class="basket-total">Итого: 750 руб</p></td>
-                </tr>
-              </table>
-              <a class="basket-btn button" href="#">Оформить заказ</a>
-          </div>
+
     </header>
 
     <main>

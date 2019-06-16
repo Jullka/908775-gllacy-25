@@ -17,18 +17,22 @@
             <img src="img/header/logo.svg" width="154" height="64" alt="Логотип Gllacy Shop">
           </a>
           <ul class="main-nav-list">
-              <li class="main-nav-item"><a class="main-nav-link" href="#"><span class="border-link">Каталог</span></a>
-                <!-- Выпадающее главное меню -->
-                  <ul class="main-menu dropdown">
-                    <li class="main-menu-item"><a class="main-menu-link" href="#">Новинки</a></li>
-                    <li class="main-menu-item"><a class="main-menu-link" href="catalog.html">Сливочное</a></li>
-                    <li class="main-menu-item"><a class="main-menu-link" href="#">Щербеты</a></li>
-                    <li class="main-menu-item"><a class="main-menu-link" href="#">Фруктовый лед</a></li>
-                    <li class="main-menu-item"><a class="main-menu-link" href="#">Мелорин</a></li>
-                  </ul>
+              <li class="main-nav-item">
+                <div class="main-menu-wrapper">
+                  <a class="main-nav-link" href="#"><span class="border-link">Каталог</span>
+                  </a>
+                  <!-- Выпадающее главное меню -->
+                    <ul class="main-menu dropdown">
+                      <li class="main-menu-item"><a class="main-menu-link" href="#">Новинки</a></li>
+                      <li class="main-menu-item"><a class="main-menu-link" href="catalog.html">Сливочное</a></li>
+                      <li class="main-menu-item"><a class="main-menu-link" href="#">Щербеты</a></li>
+                      <li class="main-menu-item"><a class="main-menu-link" href="#">Фруктовый лед</a></li>
+                      <li class="main-menu-item"><a class="main-menu-link" href="#">Мелорин</a></li>
+                    </ul>
+                  </div>
               </li>
               <li class="main-nav-item"><a class="main-nav-link" href="#"><span class="border-link">Дoставка и оплата</span></a></li>
-              <li class="main-nav-item"><a class="main-nav-link" href="#"><span class="border-link"></span>О компании</a></li>
+              <li class="main-nav-item"><a class="main-nav-link" href="#"><span class="border-link">О компании</span></a></li>
           </ul>
       </nav>
       <div class="search">
@@ -42,19 +46,18 @@
         <a class="entry-link link-dropdown" href="entry.html">Вход <span class="visually-hidden">на сайт</span>
         </a>
             <!-- Выпадающая форма входа -->
-            <div class="dropdown">
-              <form class="entry-form" method="post" action="https://echo.htmlacademy.ru">
-                <label class="visually-hidden" for="user-entry-email">Электронная почта</label>
-                <input class="entry-email input-text" type="email" name="entry-email" placeholder="Электронная почта">
-                <label class="visually-hidden" for="user-entry-password">Пароль</label>
-                <input class="entry-password input-text" type="password" name="entry-password" placeholder="Пароль">
-                <button class="entry-btn button" type="submit">Войти</button>
-                <p class="entry-restore-registration">
-                  <a href="#">Забыли пароль?</a>
-                  <a href="#">Новая регистрация</a>
-                </p>
-              </form>
-            </div>
+        <form class="entry-form dropdown" method="post" action="https://echo.htmlacademy.ru">
+          <label class="visually-hidden" for="user-entry-email">Электронная почта</label>
+          <input class="entry-email input-text" type="email" name="entry-email" placeholder="Электронная почта">
+          <label class="visually-hidden" for="user-entry-password">Пароль</label>
+          <input class="entry-password input-text" type="password" name="entry-password" placeholder="Пароль">
+          <button class="entry-btn button" type="submit">Войти</button>
+          <p class="entry-restore-registration">
+            <a href="#">Забыли пароль?</a>
+            <a href="#">Новая регистрация</a>
+          </p>
+        </form>
+
       </div>
       <div class="basket">
             <a class="basket-link link-dropdown" href="#" aria-label="Корзина">Пусто</a>
@@ -69,11 +72,10 @@
 
     <main>
       <h1 class="visually-hidden">Магазин мороженого Глейси</h1>
-      <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
-      <input class="visually-hidden" type="radio" id="product-2" name="toggle">
-      <input class="visually-hidden" type="radio" id="product-3" name="toggle">
       <section class="slider">
-        <h2 class="visually-hidden">Самые вкусные сочетания</h2>
+        <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+        <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+        <input class="visually-hidden" type="radio" id="product-3" name="toggle">
         <div class="slider-controls">
           <label for="product-1">Первый</label>
           <label for="product-2">Второй</label>
@@ -111,54 +113,54 @@
       </section>
       <section class="hits">
         <h2 class="visually-hidden">Популярное мороженое</h2>
-          <ul class="hits-list products-list">
-
-              <li class="hits-item products-item">
-                <div class="products-info">
-                  <img class="products-img" src="img/items/item1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-                  <p class="products-cost">310<span class="rouble">₽</span></p>
-                    <a class="products-link link" href="#"><span class="products-link-border">Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a>
-                    <div class="products-substrate">
-                      <a class="products-button button" href="#">Добавить в корзину</a>
-                    </div>
-                </div>
-              </li>
-              <li class="hits-item products-item">
-                <div class="products-info">
-                    <img class="products-img" src="img/items/item2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
-                    <p class="products-cost">380<span class="rouble"> ₽</span></p>
-                      <a class="products-link link" href="#">
-                        <span class="products-link-border">Сливочно-кофейное с кусочками шоколада</span>
-                      </a>
-                      <div class="products-substrate">
-                        <a class="products-button button" href="#">Добавить в корзину</a>
-                      </div>
-                </div>
-              </li>
-              <li class="hits-item products-item">
-                    <div class="products-info">
-                        <img class="products-img" src="img/items/item3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-                        <p class="products-cost">355<span class="rouble">₽</span></p>
-                          <a class="products-link link" href="#">
-                            <span class="products-link-border">Сливочно-клубничное с присыпкой из белого шоколада</span>
-                          </a>
-                          <div class="products-substrate">
-                            <a class="products-button button" href="#">Добавить в корзину</a>
-                          </div>
-                    </div>
-              </li>
-              <li class="hits-item products-item">
-                      <div class="products-info">
-                          <img class="products-img" src="img/items/item4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
-                          <p class="products-cost">415<span class="rouble">₽</span></p>
-                            <a class="products-link link" href="#">
-                              <span class="products-link-border">Сливочное крем-брюле с карамельной подливкой</span>
-                            </a>
-                            <div class="products-substrate">
-                              <a class="products-button button" href="#">Добавить в корзину</a>
-                            </div>
-                      </div>
-              </li>
+        <ul class="hits-list products-list">
+          <li class="hits-item products-item">
+            <div class="products-info">
+              <img class="products-img" src="img/items/item1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+              <p class="products-cost">310<span class="rouble">₽</span></p>
+            </div>
+            <a class="products-link link" href="#"><span class="products-link-border">Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a>
+            <div class="products-substrate">
+              <a class="products-button button" href="#">Добавить в корзину</a>
+            </div>
+          </li>
+          <li class="hits-item products-item">
+            <div class="products-info">
+              <img class="products-img" src="img/items/item2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+              <p class="products-cost">380<span class="rouble"> ₽</span></p>
+            </div>
+            <a class="products-link link" href="#">
+              <span class="products-link-border">Сливочно-кофейное с кусочками шоколада</span>
+            </a>
+            <div class="products-substrate">
+              <a class="products-button button" href="#">Добавить в корзину</a>
+            </div>
+          </li>
+          <li class="hits-item products-item">
+            <div class="products-info">
+              <img class="products-img" src="img/items/item3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+              <p class="products-cost">355<span class="rouble">₽</span></p>
+            </div>
+            <a class="products-link link" href="#">
+              <span class="products-link-border">Сливочно-клубничное с присыпкой из белого шоколада</span>
+            </a>
+            <div class="products-substrate">
+              <a class="products-button button" href="#">Добавить в корзину</a>
+            </div>
+          </li>
+          <li class="hits-item products-item">
+            <div class="products-info">
+              <img class="products-img" src="img/items/item4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+              <p class="products-cost">415<span class="rouble">₽</span></p>
+            </div>
+              <a class="products-link link" href="#">
+                <span class="products-link-border">Сливочное крем-брюле с карамельной подливкой</span>
+              </a>
+              <div class="products-substrate">
+                <a class="products-button button" href="#">Добавить в корзину</a>
+              </div>
+          </li>
+        </ul>
       </section>
       <section class="features">
           <h2 class="visually-hidden">Преимущества магазина Глейси</h2>
@@ -251,22 +253,22 @@
   </div>
 
   <!-- Форма обратной связи -->
-    <div class="overlay dropdown">
-      <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru"></form>
+  <div class="overlay">
+    <form class="feedback-form dropdown" method="post" action="https://echo.htmlacademy.ru">
       <h2 class="visually-hidden">Форма обратной связи</h2>
-      <p class="feedback-item">Мы обязательно ответим вам!</p>
-      <button class="feed-back-close-btn button" type="button" href="#"><span class="visually-hidden">Закрыть форму обратной связи</span></button>
-        <label class="visually-hidden" for="feedback-name">Имя пользователя</label>
-        <input class="feedback-name input-text" type="text" name="feedback-name" placeholder="Как вас зовут?"
-          aria-label="Как вас зовут?">
-        <label class="visually-hidden" for="feedback-email">Почта пользователя</label>
-        <input class="feedback-email input-text" type="email"  name="feedback-email" placeholder="Ваша почта для ответа?"
-          aria-label="Ваша почта для ответа?">
-        <label class="visually-hidden" for="feedback-text">Ваше сообщение</label>
-        <textarea class="feedback-text"  name="feedback-text" placeholder="Напишите что-нибудь..."></textarea>
-        <button class="feedback-submit-btn button" type="submit">Отправить</button>
-      </form>
-    </div>
+      <p class="feedback-title">
+        <b class="feedback-item">Мы обязательно ответим вам!</b>
+        <a class="feedback-close" href="#">Закрыть форму обратной связи</a>
+      </p>
+      <label class="visually-hidden" for="feedback-name">Имя пользователя</label>
+      <input class="feedback-name input-text" type="text" name="feedback-name" placeholder="Как вас зовут?" aria-label="Как вас зовут?">
+      <label class="visually-hidden" for="feedback-email">Почта пользователя</label>
+      <input class="feedback-email input-text" type="email"  name="feedback-email" placeholder="Ваша почта для ответа?" aria-label="Ваша почта для ответа?">
+      <label class="visually-hidden" for="feedback-text">Ваше сообщение</label>
+      <textarea class="feedback-text input-text"  name="feedback-text" placeholder="Напишите что-нибудь..."></textarea>
+      <button class="feedback-submit-btn button" type="submit">Отправить</button>
+    </form>
+  </div>
 </body>
 
 </html>
