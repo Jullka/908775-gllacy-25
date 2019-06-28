@@ -18,11 +18,11 @@
           </a>
           <ul class="main-nav-list">
               <li class="main-nav-item">
-                <div class="main-menu-wrapper">
-                  <a class="main-nav-link" href="#"><span class="border-link">Каталог</span>
+                  <a class="main-nav-link" href="catalog.html"><span class="border-link">Каталог</span>
                   </a>
                   <!-- Выпадающее главное меню -->
-                    <ul class="main-menu dropdown">
+                  <div class="dropdown">
+                    <ul class="main-menu">
                       <li class="main-menu-item"><a class="main-menu-link" href="#">Новинки</a></li>
                       <li class="main-menu-item"><a class="main-menu-link" href="catalog.html">Сливочное</a></li>
                       <li class="main-menu-item"><a class="main-menu-link" href="#">Щербеты</a></li>
@@ -72,30 +72,41 @@
 
     <main>
       <h1 class="visually-hidden">Магазин мороженого Глейси</h1>
-      <section class="slider">
-        <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
-        <input class="visually-hidden" type="radio" id="product-2" name="toggle">
-        <input class="visually-hidden" type="radio" id="product-3" name="toggle">
-        <div class="slider-controls">
-          <label for="product-1">Первый</label>
-          <label for="product-2">Второй</label>
-          <label for="product-3">Третий</label>
+      <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+      <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+      <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+      <div class="site-wrapper">
+        <div class="container">
+          <header class="main-header"></header>
+          <section class="slider">
+            <div class="slider-controls">
+              <label for="product-1">Первый</label>
+              <label for="product-2">Второй</label>
+              <label for="product-3">Третий</label>
+            </div>
+            <ul class="slider-list">
+              <li class="slider-item slide" id="slide1">
+                <h3 class="slide-title">
+                  Крем-брюле и пломбир с малиновым джемом
+                </h3>
+                <a class="button slide-button" href="#">Давайте оба!</a>
+              </li>
+              <li class="slider-item slide" id="slide2">
+                <h3 class="slide-title">
+                  Шоколадный пломбир и лимонный сорбет
+                </h3>
+                <a class="button slide-button" href="#">Давайте оба!</a>
+              </li>
+              <li class="slider-item slide" id="slide3">
+                <h3 class="slide-title">
+                  Пломбир с помадкой и клубничный щербет
+                </h3>
+                <a class="button slide-button" href="#">Давайте оба!</a>
+              </li>
+            </ul>
+          </section>
         </div>
-        <ul class="slider-list">
-          <li class="slider-item slide" id="slide1">
-              <h3 class="slide-title">Крем-брюле и пломбир с малиновым джемом</h3>
-              <a class="button slide-button" href="#">Давайте оба!</a>
-          </li>
-          <li class="slider-item slide" id="slide2">
-              <h3 class="slide-title">Шоколадный пломбир и лимонный сорбет</h3>
-              <a class="button slide-button" href="#">Давайте оба!</a>
-          </li>
-          <li class="slider-item slide" id="slide3">
-              <h3 class="slide-title">Пломбир с помадкой и клубничный щербет</h3>
-              <a class="button slide-button" href="#">Давайте оба!</a>
-          </li>
-        </ul>
-      </section>
+      </div>
       <section class="banners">
           <h2 class="visually-hidden">Лучшие предложения</h2>
           <ul class="banners-list">
@@ -164,8 +175,8 @@
       </section>
       <section class="features">
           <h2 class="visually-hidden">Преимущества магазина Глейси</h2>
-          <p class="features-title"><b>Магазин Глейси — это онлайн- и офлайн-магазин по продаже мороженого собственного
-              производства на развес</b></p>
+          <p class="features-title">Магазин Глейси — это онлайн- и офлайн-магазин по продаже мороженого собственного
+              производства на развес</p>
           <ul class="features-list">
             <li class="features-item features-item-ice">
               Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования
@@ -246,7 +257,7 @@
           <a href="https://htmlacademy.ru"><img src="img/footer/logo-htmlacademy.svg" alt="Логотип HTMLAcademy"
               width="108" height="39"></a>
         </li>
-        <li class="copyright-item"><b>Сделано в <a href="https://htmlacademy.ru"><span class="copyright-link-border">HTML Academy</span> © 2019</a> </b>
+        <li class="copyright-item"><p>Сделано в <a href="https://htmlacademy.ru"><span class="copyright-link-border">HTML Academy</span>© 2019</a></p>
         </li>
       </ul>
     </footer>

@@ -22,14 +22,15 @@
                     <a class="main-nav-link main-nav-link-current" href="#">Каталог
                     </a>
                     <!-- Выпадающее главное меню -->
-                      <ul class="main-menu dropdown">
+                    <div class="dropdown">
+                      <ul class="main-menu">
                         <li class="main-menu-item"><a class="main-menu-link" href="#">Новинки</a></li>
-                        <li class="main-menu-item"><a class="main-menu-link" href="catalog.html">Сливочное</a></li>
+                        <li class="main-menu-item"><a class="main-menu-link main-menu-link-current" href="catalog.html">Сливочное</a></li>
                         <li class="main-menu-item"><a class="main-menu-link" href="#">Щербеты</a></li>
                         <li class="main-menu-item"><a class="main-menu-link" href="#">Фруктовый лед</a></li>
                         <li class="main-menu-item"><a class="main-menu-link" href="#">Мелорин</a></li>
                       </ul>
-                      </div>
+                    </div>
                 </li>
                 <li class="main-nav-item"><a class="main-nav-link" href="#"><span class="border-link">Дoставка и оплата</span></a></li>
                 <li class="main-nav-item"><a class="main-nav-link" href="#"><span class="border-link">О компани</span></a></li>
@@ -59,7 +60,7 @@
           </form>
         </div>
         <div class="basket">
-              <a class="basket-link link-dropdown" href="#" aria-label="Корзина">2 товара</a>
+              <a class="basket-link link-dropdown basket-link-current" href="#" aria-label="Корзина">2 товара</a>
               <table class="basket-dropdown dropdown">
                   <tr class="basket-list">
                     <td class="basket-delete-item"><a href="#">Удалить выбранный продукт</a></td>
@@ -69,17 +70,17 @@
                     <td class="basket-cost">300pуб</td>
                   </tr>
                   <tr class="basket-list basket-border">
-                    <td><a class="basket-delete-item" href="#">Удалить выбранный продукт</a></td>
-                    <td><span class="basket-img"></span></td>
-                    <td><p class="basket-item">Клубничный пломбир с присыпкой из белого шоколада</p></td>
-                    <td class=""><p class="basket-weight-price">1,5 кг х<span class="basket-price">300 руб.</span></p></td>
+                    <td class="basket-delete-item"><a href="#">Удалить выбранный продукт</a></td>
+                    <td class="basket-img basket-img-second"></td>
+                    <td class="basket-item">Клубничный пломбир с присыпкой из белого шоколада</td>
+                    <td class="basket-weight-price">1,5 кг х<span class="basket-price">300 руб.</span></td>
                     <td ><p class="basket-cost">450pуб</p></td>
                   </tr>
                   <tr>
                     <td class="basket-total" colspan="5">Итого: 750 руб</td>
                   </tr>
                   <tr>
-                    <td class="basket-btn button" colspan="5"><a href="#">Оформить заказ</a></td>
+                    <td class="basket-submit" colspan="5"><a class="basket-btn button" href="#">Оформить заказ</a></td>
                   </tr>
               </table>
 
@@ -91,16 +92,34 @@
           </p>
         </div>
 
-          <!-- Активная корзина -->
+
 
     </header>
 
     <main>
       <h2 class="visually-hidden">Каталог мoроженого магазина Gllacy Shop</h2>
       <ol class="breadcrumbs">
-          <li class="breadcrumbs-item"><a class="breadcrumbs-link" href="index.html"><span class="border-link">Главная</span></a></li>
-          <li class="breadcrumbs-item"><a class="breadcrumbs-link" href="catalog.html"><span class="border-link">Каталог</span></a></li>
-          <li class="breadcrumbs-item"><a class="breadcrumbs-link breadcrumbs-link-current">Сливочное</a></li>
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link" href="index.html"><span class="border-link">Главная</span></a>
+          </li>
+          <li class="breadcrumbs-item">
+            <svg class="breadcrumbs-arrow" width="10" height="8">
+              <polyline class="breadcrumbs-arrow-first" points="1,1 4,4 1,7"></polyline>
+              <polyline class="breadcrumbs-arrow-second" points="5,1 8,4 5,7"></polyline>
+            </svg>
+          </li>
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link" href="catalog.html"><span class="border-link">Каталог</span></a>
+          </li>
+          <li class="breadcrumbs-item">
+            <svg class="breadcrumbs-arrow" width="10" height="8">
+              <polyline class="breadcrumbs-arrow-first" points="1,1 4,4 1,7"></polyline>
+              <polyline class="breadcrumbs-arrow-second" points="5,1 8,4 5,7"></polyline>
+            </svg>
+          </li>
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link breadcrumbs-link-current">Сливочное</a>
+          </li>
         </ol>
       <section class="catalog">
             <h1 class="page-title">Сливочное мороженое</h1>
@@ -113,143 +132,143 @@
                   <div class="products-info">
                     <img class="products-img" src="img/items/item1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
                     <p class="products-cost">310<span class="rouble">₽</span></p>
-                      <a class="products-link link" href="#"><span class="products-link-border">Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a>
-                      <div class="products-substrate">
-                        <a class="products-button button" href="#">Добавить в корзину</a>
-                      </div>
+                  </div>
+                    <a class="products-link link" href="#"><span class="products-link-border">Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a>
+                    <div class="products-substrate">
+                      <a class="products-button button" href="#">Добавить в корзину</a>
+                    </div>
+                </li>
+                <li class="products-item">
+                  <div class="products-info">
+                    <img class="products-img" src="img/items/item2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+                    <p class="products-cost">380<span class="rouble"> ₽</span></p>
+                  </div>
+                  <a class="products-link link" href="#">
+                    <span class="products-link-border">Сливочно-кофейное с кусочками шоколада</span>
+                  </a>
+                  <div class="products-substrate">
+                    <a class="products-button button" href="#">Добавить в корзину</a>
                   </div>
                 </li>
                 <li class="products-item">
                   <div class="products-info">
-                      <img class="products-img" src="img/items/item2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
-                      <p class="products-cost">380<span class="rouble"> ₽</span></p>
-                        <a class="products-link link" href="#">
-                          <span class="products-link-border">Сливочно-кофейное с кусочками шоколада</span>
-                        </a>
-                        <div class="products-substrate">
-                          <a class="products-button button" href="#">Добавить в корзину</a>
-                        </div>
+                    <img class="products-img" src="img/items/item3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+                    <p class="products-cost">355<span class="rouble">₽</span></p>
+                  </div>
+                  <a class="products-link link" href="#">
+                    <span class="products-link-border">Сливочно-клубничное с присыпкой из белого шоколада</span>
+                  </a>
+                  <div class="products-substrate">
+                    <a class="products-button button" href="#">Добавить в корзину</a>
                   </div>
                 </li>
                 <li class="products-item">
-                      <div class="products-info">
-                          <img class="products-img" src="img/items/item3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-                          <p class="products-cost">355<span class="rouble">₽</span></p>
-                            <a class="products-link link" href="#">
-                              <span class="products-link-border">Сливочно-клубничное с присыпкой из белого шоколада</span>
-                            </a>
-                            <div class="products-substrate">
-                              <a class="products-button button" href="#">Добавить в корзину</a>
-                            </div>
-                      </div>
-                </li>
-                <li class="products-item">
-                        <div class="products-info">
-                            <img class="products-img" src="img/items/item4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
-                            <p class="products-cost">415<span class="rouble">₽</span></p>
-                              <a class="products-link link" href="#">
-                                <span class="products-link-border">Сливочное крем-брюле с карамельной подливкой</span>
-                              </a>
-                              <div class="products-substrate">
-                                <a class="products-button button" href="#">Добавить в корзину</a>
-                              </div>
-                        </div>
+                  <div class="products-info">
+                    <img class="products-img" src="img/items/item4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+                    <p class="products-cost">415<span class="rouble">₽</span></p>
+                  </div>
+                  <a class="products-link link" href="#">
+                    <span class="products-link-border">Сливочное крем-брюле с карамельной подливкой</span>
+                  </a>
+                  <div class="products-substrate">
+                    <a class="products-button button" href="#">Добавить в корзину</a>
+                  </div>
                 </li>
                 <li class="products-item">
                   <div class="products-info">
                     <img class="products-img" src="img/items/item5.png" width="267" height="267" alt="Сливочное с брусничным джемом">
                     <p class="products-cost">325 <span class="rouble">₽</span></p>
-                      <a class="products-link link" href="#">
-                        <span class="products-link-border">Сливочное с брусничным джемом</span>
-                      </a>
-                      <div class="products-substrate">
-                        <a class="products-button button" href="#">Добавить в корзину</a>
-                      </div>
+                  </div>
+                  <a class="products-link link" href="#">
+                    <span class="products-link-border">Сливочное с брусничным джемом</span>
+                  </a>
+                  <div class="products-substrate">
+                    <a class="products-button button" href="#">Добавить в корзину</a>
                   </div>
                 </li>
                 <li class="products-item">
                   <div class="products-info">
-                      <img class="products-img" src="img/items/item6.png" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники">
-                      <p class="products-cost">410<span class="rouble">₽</span></p>
-                        <a class="products-link link" href="#">
-                          <span class="products-link-border">Сливочно-черничное с цельными ягодами черники</span>
-                        </a>
-                        <div class="products-substrate">
-                          <a class="products-button button" href="#">Добавить в корзину</a>
-                        </div>
+                    <img class="products-img" src="img/items/item6.png" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники">
+                    <p class="products-cost">410<span class="rouble">₽</span></p>
+                  </div>
+                  <a class="products-link link" href="#">
+                    <span class="products-link-border">Сливочно-черничное с цельными ягодами черники</span>
+                  </a>
+                  <div class="products-substrate">
+                    <a class="products-button button" href="#">Добавить в корзину</a>
                   </div>
                 </li>
                 <li class="products-item">
                     <div class="products-info">
-                        <img class="products-img" src="img/items/item7.png" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
-                        <p class="products-cost">375<span class="rouble">₽</span></p>
-                          <a class="products-link link" href="#">
-                            <span class="products-link-border">Сливочно-лимонное с карамельной присыпкой</span>
-                          </a>
-                          <div class="products-substrate">
-                            <a class="products-button button" href="#">Добавить в корзину</a>
-                          </div>
+                      <img class="products-img" src="img/items/item7.png" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
+                      <p class="products-cost">375<span class="rouble">₽</span></p>
                     </div>
-                </li>
-                <li class="products-item">
-                    <div class="products-info">
-                        <img class="products-img" src="img/items/item12.png" width="267" height="267" alt="Сливочное с шоколадной стружкой">
-                        <p class="products-cost">320<span class="rouble">₽</span></p>
-                          <a class="products-link link" href="#">
-                            <span class="products-link-border">Сливочное с шоколадной стружкой</span>
-                          </a>
-                          <div class="products-substrate">
-                            <a class="products-button button" href="#">Добавить в корзину</a>
-                          </div>
+                    <a class="products-link link" href="#">
+                      <span class="products-link-border">Сливочно-лимонное с карамельной присыпкой</span>
+                    </a>
+                    <div class="products-substrate">
+                      <a class="products-button button" href="#">Добавить в корзину</a>
                     </div>
                 </li>
                 <li class="products-item">
                   <div class="products-info">
-                      <img class="products-img" src="img/items/item8.png" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
-                      <p class="products-cost">440<span class="rouble">₽</span></p>
-                        <a class="products-link link" href="#">
-                          <span class="products-link-border">Сливочно-ванильное с кусочками шоколада</span>
-                        </a>
-                        <div class="products-substrate">
-                          <a class="products-button button" href="#">Добавить в корзину</a>
-                        </div>
+                    <img class="products-img" src="img/items/item12.png" width="267" height="267" alt="Сливочное с шоколадной стружкой">
+                    <p class="products-cost">320<span class="rouble">₽</span></p>
+                  </div>
+                  <a class="products-link link" href="#">
+                    <span class="products-link-border">Сливочное с шоколадной стружкой</span>
+                  </a>
+                  <div class="products-substrate">
+                    <a class="products-button button" href="#">Добавить в корзину</a>
                   </div>
                 </li>
                 <li class="products-item">
-                    <div class="products-info">
-                        <img class="products-img" src="img/items/item9.png" width="267" height="267" alt="Сливочноe с ментоловым сиропом">
-                        <p class="products-cost">435<span class="rouble">₽</span></p>
-                          <a class="products-link link" href="#">
-                            <span class="products-link-border">Сливочноe с ментоловым сиропом</span>
-                          </a>
-                          <div class="products-substrate">
-                            <a class="products-button button" href="#">Добавить в корзину</a>
-                          </div>
-                    </div>
+                  <div class="products-info">
+                    <img class="products-img" src="img/items/item8.png" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
+                    <p class="products-cost">440<span class="rouble">₽</span></p>
+                  </div>
+                  <a class="products-link link" href="#">
+                    <span class="products-link-border">Сливочно-ванильное с кусочками шоколада</span>
+                  </a>
+                  <div class="products-substrate">
+                    <a class="products-button button" href="#">Добавить в корзину</a>
+                  </div>
                 </li>
                 <li class="products-item">
-                    <div class="products-info">
-                        <img class="products-img" src="img/items/item10.png" width="267" height="267" alt="Сливочное с кусочками черного шоколада">
-                        <p class="products-cost">355<span class="rouble">₽</span></p>
-                          <a class="products-link link" href="#">
-                            <span class="products-link-border">Сливочное с кусочками черного шоколада</span>
-                          </a>
-                          <div class="products-substrate">
-                            <a class="products-button button" href="#">Добавить в корзину</a>
-                          </div>
-                    </div>
+                  <div class="products-info">
+                    <img class="products-img" src="img/items/item9.png" width="267" height="267" alt="Сливочноe с ментоловым сиропом">
+                    <p class="products-cost">435<span class="rouble">₽</span></p>
+                  </div>
+                  <a class="products-link link" href="#">
+                    <span class="products-link-border">Сливочноe с ментоловым сиропом</span>
+                  </a>
+                  <div class="products-substrate">
+                    <a class="products-button button" href="#">Добавить в корзину</a>
+                  </div>
                 </li>
                 <li class="products-item">
-                    <div class="products-info">
-                        <img class="products-img" src="img/items/item11.png" width="267" height="267" alt="Сливочное с мятным сиропом">
-                        <p class="products-cost">420<span class="rouble">₽</span></p>
-                          <a class="products-link link" href="#">
-                            <span class="products-link-border">Сливочное с мятным сиропом</span>
-                          </a>
-                          <div class="products-substrate">
-                            <a class="products-button button" href="#">Добавить в корзину</a>
-                          </div>
-                    </div>
+                  <div class="products-info">
+                    <img class="products-img" src="img/items/item10.png" width="267" height="267" alt="Сливочное с кусочками черного шоколада">
+                    <p class="products-cost">355<span class="rouble">₽</span></p>
+                  </div>
+                  <a class="products-link link" href="#">
+                    <span class="products-link-border">Сливочное с кусочками черного шоколада</span>
+                  </a>
+                  <div class="products-substrate">
+                    <a class="products-button button" href="#">Добавить в корзину</a>
+                  </div>
+                </li>
+                <li class="products-item">
+                  <div class="products-info">
+                    <img class="products-img" src="img/items/item11.png" width="267" height="267" alt="Сливочное с мятным сиропом">
+                    <p class="products-cost">420<span class="rouble">₽</span></p>
+                  </div>
+                  <a class="products-link link" href="#">
+                    <span class="products-link-border">Сливочное с мятным сиропом</span>
+                  </a>
+                  <div class="products-substrate">
+                    <a class="products-button button" href="#">Добавить в корзину</a>
+                  </div>
                 </li>
               </ul>
 
@@ -276,7 +295,7 @@
           <a href="https://htmlacademy.ru"><img src="img/footer/logo-htmlacademy.svg" alt="Логотип HTMLAcademy"
               width="108" height="39"></a>
         </li>
-        <li class="copyright-item"><b>Сделано в <a href="https://htmlacademy.ru"><span class="copyright-link-border">HTML Academy</span> © 2019</a> </b>
+        <li class="copyright-item"><p>Сделано в <a href="https://htmlacademy.ru"><span class="copyright-link-border">HTML Academy</span>© 2019</a></p>
         </li>
       </ul>
     </footer>

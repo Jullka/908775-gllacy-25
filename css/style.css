@@ -49,10 +49,9 @@
   .dropdown {
     display: none;
     position: absolute;
-    padding: 20px 15px;
-    background-color: rgb(248, 247, 244);
-    border-radius: 5px;
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4)
+    z-index: 1;
+    padding-top: 5px;
+
   }
 
   .dropdown:active,
@@ -87,25 +86,28 @@
 
   .input-text {
     padding: 8px 14px;
-    margin-bottom: 20px;
     width: 100%;
+    height: 42px;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
     color: rgb(153, 153, 153);
 
     border: 1px solid rgba(178, 178, 178, 0.52);
+    border-radius: 5px;
     outline: none;
   }
 
 
   .input-text:hover {
+    padding: 7px 13px;
     border: 2px solid rgba(174, 174, 174, 0.52);
   }
 
 
   .input-text:focus,
   .input-text:active {
+    padding: 7px 13px;
     border: 2px solid rgba(46, 136, 228, 0.52);
   }
 
@@ -130,6 +132,8 @@
     border: none;
     cursor: pointer;
   }
+
+
 
   .button:focus,
   .button:hover {
@@ -180,7 +184,6 @@
 
   .main-nav-link {
     display: block;
-    margin-bottom: 5px;
     padding: 5px 14px;
     font-size: 16px;
     font-weight: 700;
@@ -213,14 +216,25 @@
     border: 0;
   }
 
-  .main-menu-wrapper:hover>.main-menu {
+  .main-nav-link-current:focus,
+  .main-nav-link-current:hover {
+    background-color: rgb(208, 112, 88);
+    color: rgb(255, 255, 255);
+  }
+
+
+  li:hover .dropdown {
     display: block;
   }
 
   .main-menu {
+    background-color: rgb(248, 247, 244);
+    border-radius: 5px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
     width: 142px;
-    padding: 0 9px 0 6px;
+    padding: 0;
     list-style: none;
+    top: 100%;
   }
 
 
@@ -248,6 +262,10 @@
     outline: 0;
   }
 
+  .main-menu-link-current {
+    background-color: rgb(208, 112, 88);
+    color: rgb(255, 255, 255);
+  }
 
   .main-menu-link:focus,
   .main-menu-link:hover {
@@ -263,10 +281,10 @@
     position: relative;
 }
 
-  .search:hover>.search-form,
-  .search-link:hover~.search-form,
-  .entry:hover>.entry-form,
-  .entry-link:hover~.entry-form {
+  .search:hover .dropdown,
+  .search-link:hover .search-form,
+  .entry:hover .entry-form,
+  .entry-link:hover .entry-form {
     display: block;
   }
 
@@ -282,6 +300,7 @@
   .search-link::before {
     content: url(../img/header/icon-search.svg);
     left: 50%;
+    top: 60%;
     width: 17px;
   }
 
@@ -298,8 +317,15 @@
   }
 
   .search-form {
-    right: 0;
+    background-color: rgb(248, 247, 244);
+    border-radius: 5px;
     width: 340px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+    padding: 16px 20px;
+    list-style: none;
+    top: 100%;
+    right: 0;
+
   }
 
   .entry {
@@ -325,16 +351,24 @@
   }
 
   .entry-form {
-    right: 0;
+    background-color: rgb(248, 247, 244);
+    border-radius: 5px;
     width: 277px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+    padding: 19px 16px 20px 19px;
+    right: 0;
     padding-left: 20px;
+  }
+
+  .entry-email, .entry-password {
+  margin-bottom: 20px;
   }
 
   .basket {
     position: relative;
   }
 
-  .basket:hover>.basket-dropdown {
+  .basket:hover .basket-dropdown {
     display: block;
 }
 
@@ -344,48 +378,83 @@
 
   }
 
-
-
   .basket-dropdown {
     right: 0;
     z-index: 2;
     width: 540px;
     color: rgb(50, 50, 50);
+    background-color: rgb(248, 247, 244);
+    border-radius: 5px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+    padding: 19px 16px 20px 19px;
+    padding-left: 20px;
   }
 
+.basket-delete-item {
+  width: 25px;
+  font-size: 0;
+  background-image: url(../img/x.svg);
+  background-size: 11px;
+  background-repeat: no-repeat;
+  background-position: center;
 
-td {
-  border: 1px solid black;
 }
 
 
-  .basket-border {
-    border-bottom: 1px solid rgb(50, 50, 50);
-  }
 
+.basket-delete-item a {
+  font-size: 0;
+}
 
-  .basket-delete-item {
-    position: absolute;
-    width: 11px;
-    height: 11px;
-    font-size: 0;
-    background-image: url(../img/x.svg);
-    border: 0;
-    outline: 0;
-  }
   .basket-img {
     width: 50px;
+    height: 50px;
+    background-size: 33px;
+    background-repeat: no-repeat;
+    background-position: center;
+
   }
   .basket-img-first {
-    background-image: url("..img/items/item1.png")
+    background-image: url(../img/items/item1.png);
+  }
+
+  .basket-img-second {
+    background-image: url(../img/items/item3.png);
   }
 
   .basket-list-item {
     width: 235px;
   }
 
-  .basket-btn {
+  .basket-item {
+    width: 240px;
 
+  }
+
+  .basket-weight-price {
+    text-align: right;
+  }
+
+  .basket-cost {
+    text-align: right;
+  }
+
+  .basket-total {
+    padding: 20px 0;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 700;
+    color: rgb(50, 50, 50);
+    text-align: right;
+
+  }
+
+  .basket-submit {
+    text-align: right;
+  }
+
+  .basket-btn {
+    height: 44px;
   }
 
   .entry-restore-registration {
@@ -398,7 +467,7 @@ td {
 
     font-size: 13px;
     line-height: 24px;
-    font-weight: 700;
+    font-weight: 400;
     color: rgb(50, 50, 50);
     text-decoration: underline;
     text-decoration-color: rgba(50, 50, 50, 0.3);
@@ -410,9 +479,16 @@ td {
   .basket-link-current,
   .basket-link-current:focus,
   .basket-link-current:hover {
-    color: rgba(50, 50, 50, 1);
+    color: rgb(50, 50, 50);
 
-    background-color: rgba(248, 247, 244, 1);
+    background-color: rgb(248, 247, 244);
+  }
+
+  .basket-link-current::before,
+  .basket-link-current:active::before,
+  .basket-link-current:focus::before,
+  .basket-link-current:hover::before {
+    content: url(../img/header/icon-basketred.svg);
   }
 
 
@@ -423,26 +499,23 @@ td {
     box-shadow: none;
   }
 
+  .basket-border {
+    border-bottom: 1px solid black;
+  }
 
   .basket-list {
     font-size: 14px;
     line-height: 16px;
     font-weight: 400;
-    color: rgba(50, 50, 50, 1);
+    color: rgb(50, 50, 50);
   }
 
 
   .basket-price {
-    color: rgba(153, 153, 153, 1);
+    color: rgb(153, 153, 153);
+    padding: 0 0 0 5px;
   }
 
-
-  .basket-total {
-    font-size: 15px;
-    line-height: 18px;
-    font-weight: 700;
-    color: rgba(50, 50, 50, 1);
-  }
 
   .header-wrapper {
     margin: auto 0 5px;
@@ -596,7 +669,6 @@ td {
   }
 
   .banners-title {
-    padding: 0;
     margin: 0 0 17px;
 
     font-size: 32px;
@@ -614,9 +686,6 @@ td {
 
   .banner-link {
     align-self: flex-end;
-    font-weight: 400;
-
-
   }
 
   .hits-item::before {
@@ -636,6 +705,32 @@ td {
     flex-basis: 267px;
   }
 
+  .products-item:hover::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: -6px;
+    left: -5%;
+    width: 110%;
+    height: 405px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+  .products-substrate {
+    display: none;
+    position: absolute;
+    left: -5%;
+    width: 110%;
+    padding-bottom: 22px;
+
+  }
+
+  .products-item:hover .products-substrate {
+    display: block;
+  }
+
   .products-list {
     padding: 0;
     margin: 0;
@@ -651,24 +746,28 @@ td {
   position: relative;
 }
 
-  .products-info:hover {
-    background-color: rgb(155, 175, 163);
-  }
+
 
   .products-cost {
     position: absolute;
-    bottom: 35px;
+    bottom: 20px;
+    margin: 0;
 
 
     font-size: 45px;
     line-height: 45px;
     font-weight: 700;
+    text-shadow: 0.5px 0.86px 3px rgba(49,50,53,.5);
   }
 
-  .products-link{
+  .products-link {
     display: block;
+    margin: 10px 0 17px;
     text-align: center;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.2);
   }
+
 
   .features {
     margin: 0 0 40px;
@@ -704,15 +803,14 @@ td {
 
   .features-item {
     position: relative;
-    margin: 25px 0 0 0;
-    padding: 0 0 0 57px;
+    padding: 25px 0 0 57px;
     flex-basis: 530px;
   }
 
   .features-item::before {
     content: "";
     position: absolute;
-    top: -15px;
+    top: 5%;
     left: 0;
     width: 50px;
     height: 50px;
@@ -760,7 +858,7 @@ td {
     margin: 0;
     font-size: 16px;
     line-height: 22px;
-    font-weight: 400;
+    font-weight: 500;
     color: rgb(50, 50, 50);
   }
 
@@ -772,7 +870,7 @@ td {
 
     font-size: 24px;
     line-height: 30px;
-    font-weight: 400;
+    font-weight: 700;
     color: rgb(50, 50, 50);
 
     text-decoration: underline;
@@ -781,10 +879,15 @@ td {
   .subscription {
     margin: 0;
     flex-basis: 560px;
+    padding: 5px;
+    background-image: repeating-linear-gradient(135deg, rgb(254, 158, 144) 0, rgb(254, 158, 144) 6px, rgb(255, 255, 255) 6px, rgb(255, 255, 255) 12px, rgb(146, 205, 255) 12px, rgb(146, 205, 255) 18px, rgb(255, 255, 255) 18px, rgb(255, 255, 255) 24px);
+    background-size: cover;
+    border-radius: 14px;
+
   }
 
   .subscription-wrapper {
-    padding: 30px 20px;
+    padding: 32px 20px;
     width: 548px;
     border-radius: 15px;
   }
@@ -794,23 +897,24 @@ td {
   }
 
   .subscription-submit-btn {
+    margin-left: 2px;
     color: rgb(255, 255, 255);
+    padding: 9px 24px;
   }
 
   .subscription-info {
     display: block;
     margin: 0 0 40px;
     line-height: 22px;
+    font-weight: 400;
     color: rgb(50, 50, 50);
   }
 
 
   .map {
     position: relative;
+    padding: 63px 0;
     overflow: hidden;
-
-
-
     font-size: 14px;
     line-height: 20px;
     font-weight: 400;
@@ -820,9 +924,10 @@ td {
   .map-img {
     position: absolute;
     z-index: -1;
+
   }
   .contacts {
-    margin: 63px 0 63px 842px;
+    margin-left: auto;
     padding: 30px 25px;
     width: 303px;
     color: rgb(50, 50, 50);
@@ -847,7 +952,7 @@ td {
     display: block;
     font-size: 18px;
     line-height: 22px;
-    font-weight: 400;
+    font-weight: 700;
     color: inherit;
   }
 
@@ -859,8 +964,8 @@ td {
 
   .contacts-btn {
     display: block;
-    margin: 28px 0;
-    padding: 8px 27px 8px 28px;
+    margin: 28px 0 0 0;
+    padding: 13px 27px;
   }
 
   .overlay {
@@ -1001,6 +1106,9 @@ td {
     list-style: none;
   }
 
+.copyright-item p {
+  margin: 0;
+}
 
   .copyright-item {
     font-size: 12px;
@@ -1027,6 +1135,24 @@ td {
     font-weight: 400;
   }
 
+  .breadcrumbs-link-current {
+    border-bottom: 0;
+  }
+
+
+  .breadcrumbs-link {
+    position: relative;
+  }
+
+  .breadcrumbs-arrow {
+    margin: 2px 5px 0;
+}
+
+  .breadcrumbs-arrow-first, .breadcrumbs-arrow-second {
+    stroke-width: 2;
+    fill: none;
+    stroke: rgb(255, 255, 255);
+}
 
   .page-title {
     font-size: 36px;
@@ -1034,6 +1160,4 @@ td {
     font-weight: 700;
   }
 
-  .breadcrumbs-link-current {
-    border-bottom: 0;
-  }
+
