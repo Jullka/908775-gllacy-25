@@ -27,7 +27,6 @@
     color: rgb(255, 255, 255);
   }
 
-
   .visually-hidden {
     position: absolute;
     width: 1px;
@@ -44,6 +43,29 @@
     width: 1200px;
     margin: 0 auto;
     padding: 0 27px;
+  }
+
+  .site-wrapper {
+    min-width: 940px;
+    background-image: url("../img/bg/bg-ice1.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    transition: background-image 0.5s ease, background-color 0.5s ease;
+    }
+
+  .site-wrapper::before,
+  .site-wrapper::after {
+  content: "";
+
+  visibility: hidden;
+  }
+
+  .site-wrapper::before {
+  background-image: url("../img/bg/bg-ice2.png");
+  }
+
+  .site-wrapper::after {
+  background-image: url("../img/bg/bg-ice3.png");
   }
 
   .dropdown {
@@ -132,6 +154,8 @@
     border: none;
     cursor: pointer;
   }
+
+
 
 
 
@@ -235,8 +259,8 @@
     padding: 0;
     list-style: none;
     top: 100%;
+    overflow: hidden;
   }
-
 
   .main-menu li:first-child {
     display: block;
@@ -244,7 +268,6 @@
 
     font-weight: 700;
     border-bottom: 1px solid rgba(50, 50, 50, 0.2)
-
   }
 
   .main-menu-item {
@@ -378,6 +401,11 @@
 
   }
 
+  .basket-link:focus::before,
+  .basket-link:hover::before {
+    content: url(../img/header/icon-basketblack.svg);
+}
+
   .basket-dropdown {
     right: 0;
     z-index: 2;
@@ -399,7 +427,6 @@
   background-position: center;
 
 }
-
 
 
 .basket-delete-item a {
@@ -480,7 +507,6 @@
   .basket-link-current:focus,
   .basket-link-current:hover {
     color: rgb(50, 50, 50);
-
     background-color: rgb(248, 247, 244);
   }
 
@@ -545,6 +571,7 @@
     font-weight: 700;
   }
 
+
   .slider {
     position: relative;
 
@@ -552,26 +579,6 @@
 
     text-align: center;
     color: #ffffff;
-    background: url(../img/bg/bg-ice1.png) no-repeat;
-    background-position: top center;
-
-
-    /* transition: background-image 0.5s ease, background-color 0.5s ease; */
-  }
-
-  .slider::before,
-  .slider::after {
-    content: "";
-
-    visibility: hidden;
-  }
-
-  .slider::before {
-    background-image: url("../img/bg/bg-ice2.png)");
-  }
-
-  .slider::after {
-    background-image: url("../img/bg/bg-ice3.png)");
   }
 
   .slider-list {
@@ -587,52 +594,74 @@
 
   .slide-title {
     width: 700px;
-    margin: 270px 0 auto;
+    margin: 0 auto;
+    margin-bottom: 27px;
 
     font-size: 60px;
     line-height: 60px;
-    font-weight: 700;
+    font-weight: 800;
   }
 
   .slide-button {
-    font-size: 32px;
-    line-height: 44px;
-}
+    margin: 0 0 40px;
+    padding: 12px 44px;
+    font-weight: 600;
+    font-size: 31px;
+    line-height: 41px;
+    text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 
-.slider-controls {
-  position: absolute;
-  bottom: 63px;
-  left: 0;
-  z-index: 20;
+  }
 
-  font-size: 0;
-}
+  .slider-controls {
+    position: absolute;
+    bottom: 63px;
+    left: 0;
+    z-index: 20;
 
-.slider-controls label {
-  display: inline-block;
-  width: 17px;
-  height: 17px;
-  margin-right: 8px;
+    font-size: 0;
+  }
 
-  vertical-align: top;
+  .slider-controls label {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    margin-right: 8px;
 
-  background-color: transparent;
-  border: 2px solid #ffffff;
-  border-radius: 50%;
-  cursor: pointer;
-}
+    vertical-align: top;
 
-#product-1:checked ~ .slader #slide1,
-#product-2:checked ~ .slider #slide2,
-#product-3:checked ~ .slider #slide3 {
-  display: block;
-}
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 
-#product-1:checked ~ .slider label[for="product-1"],
-#product-2:checked ~ .slider label[for="product-2"],
-#product-3:checked ~ .slider label[for="product-3"] {
-  background-color: #ffffff;
-}
+  #product-1:checked ~ .site-wrapper {
+    background-color: #849d8f;
+    background-image: url("../img/bg/bg-ice1.png");
+  }
+
+  #product-2:checked ~ .site-wrapper {
+    background-color: #8996a6;
+    background-image: url("../img/bg/bg-ice2.png");
+  }
+
+  #product-3:checked ~ .site-wrapper {
+    background-color: #9d8b84;
+    background-image: url("../img/bg/bg-ice3.png");
+  }
+
+  #product-1:checked ~ .site-wrapper #slide1,
+  #product-2:checked ~ .site-wrapper #slide2,
+  #product-3:checked ~ .site-wrapper #slide3 {
+    display: block;
+  }
+
+
+  #product-1:checked ~ .site-wrapper label[for="product-1"],
+  #product-2:checked ~ .site-wrapper label[for="product-2"],
+  #product-3:checked ~ .site-wrapper label[for="product-3"] {
+    background-color: #ffffff;
+  }
 
  .banners {
    margin-bottom: 38px;
@@ -923,7 +952,10 @@
 
   .map-img {
     position: absolute;
+    left: 50%;
+    top: 50%;
     z-index: -1;
+    transform: translate(-50%, -50%);
 
   }
   .contacts {
@@ -1047,8 +1079,9 @@
     height: 32px;
     width: 32px;
     border-radius: 50%;
-
     background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
 
     border: 3px solid rgba(255, 255, 255, 0.5);
     opacity: 0.8;
@@ -1106,7 +1139,7 @@
     list-style: none;
   }
 
-.copyright-item p {
+  .copyright-item p {
   margin: 0;
 }
 
@@ -1135,6 +1168,15 @@
     font-weight: 400;
   }
 
+  .breadcrumbs-arrow::after {
+    content: "";
+    display: inline-block;
+    background: url(../img/arrows.svg) no-repeat;
+    width: 10px;
+    height: 8px;
+
+  }
+
   .breadcrumbs-link-current {
     border-bottom: 0;
   }
@@ -1145,7 +1187,7 @@
   }
 
   .breadcrumbs-arrow {
-    margin: 2px 5px 0;
+    margin: 2px 0;
 }
 
   .breadcrumbs-arrow-first, .breadcrumbs-arrow-second {
@@ -1160,4 +1202,62 @@
     font-weight: 700;
   }
 
+  .paginator {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 42px 0 30px 0;
+    list-style: none;
+}
+
+  .paginator-link {
+    display: block;
+    width: 27px;
+    height: 27px;
+    padding: 5px;
+    font-weight: 500;
+    line-height: 18px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+  .paginator-link:focus,
+  .paginator-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+  .paginator-link:active,
+  .paginator-link-active {
+    color: rgb(50, 50, 50);
+    background-color: rgb(255, 255, 255);
+}
+
+  .paginator-item {
+    padding: 0 1px;
+}
+
+  .paginator-item-arrow {
+    font-size: 0;
+    line-height: 0;
+}
+
+  .paginator-item:first-of-type {
+    margin-right: 16px;
+}
+
+  .paginator-item:last-of-type {
+    margin-left: 16px;
+}
+
+  .paginator-arrow {
+    stroke-width: 1;
+    fill: none;
+    stroke: rgb(255, 255, 255);
+}
+
+  .paginator-arrow-left {
+    stroke-opacity: 0.2;
+}
 
