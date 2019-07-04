@@ -133,10 +133,6 @@
     border: 2px solid rgba(46, 136, 228, 0.52);
   }
 
-  .border-link {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  }
-
   .button {
     display: inline-block;
     vertical-align: top;
@@ -154,10 +150,6 @@
     border: none;
     cursor: pointer;
   }
-
-
-
-
 
   .button:focus,
   .button:hover {
@@ -245,6 +237,58 @@
     background-color: rgb(208, 112, 88);
     color: rgb(255, 255, 255);
   }
+
+  .link {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    color: rgb(255, 255, 255);
+}
+
+  .border-link {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+  .link:active,
+  .link:focus,
+  .link:hover {
+    color: rgb(255, 188, 158);
+}
+
+  .link:active .border-link,
+  .link:focus .border-link,
+  .link:hover .border-link {
+    border-bottom-color: rgba(255, 188, 158, 0.3);
+}
+
+  .link:active {
+    outline: 0;
+}
+
+  .dark-link {
+    display: inline;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgb(50, 50, 50);
+}
+
+  .dark-link .border-link{
+    border-bottom: 1px solid rgba(50, 50, 50, 0.3);
+}
+
+  .dark-link:active,
+  .dark-link:focus,
+  .dark-link:hover {
+    color: rgb(232, 77, 55);
+}
+
+  .dark-link:active .border-link,
+  .dark-link:focus .border-link,
+  .dark-link:hover .border-link {
+    border-bottom-color: rgba(232, 77, 55, 0.3);
+}
 
 
   li:hover .dropdown {
@@ -363,9 +407,9 @@
 
   .entry-link:focus,
   .entry-link:hover {
-    color: rgba(50, 50, 50, 1);
+    color: rgb(50, 50, 50);
 
-    background-color: rgba(248, 247, 244, 1);
+    background-color: rgb(248, 247, 244);
   }
 
   .entry-link:focus::before,
@@ -489,15 +533,10 @@
     margin: 0 0 0 18px;
   }
 
-  .entry-restore-registration a {
+  .entry-restore-registration .link {
     display: block;
-
-    font-size: 13px;
     line-height: 24px;
-    font-weight: 400;
-    color: rgb(50, 50, 50);
-    text-decoration: underline;
-    text-decoration-color: rgba(50, 50, 50, 0.3);
+
   }
 
 
@@ -729,7 +768,7 @@
 
   .products-item {
     position: relative;
-    padding: 0 0 40px;
+    z-index: 2;
     margin: auto;
     flex-basis: 267px;
   }
@@ -737,11 +776,11 @@
   .products-item:hover::after {
     content: "";
     position: absolute;
-    z-index: 1;
+    z-index: -1;
     top: -6px;
     left: -5%;
     width: 110%;
-    height: 405px;
+    height: calc(100% + 30px);
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
@@ -749,11 +788,10 @@
 
   .products-substrate {
     display: none;
-    position: absolute;
     left: -5%;
     width: 110%;
     padding-bottom: 22px;
-
+    z-index: 10;
   }
 
   .products-item:hover .products-substrate {
@@ -771,11 +809,9 @@
     list-style: none;
   }
 
-.products-info {
-  position: relative;
+  .products-info {
+     position: relative;
 }
-
-
 
   .products-cost {
     position: absolute;
@@ -793,10 +829,7 @@
     display: block;
     margin: 10px 0 17px;
     text-align: center;
-    text-decoration: underline;
-    text-decoration-color: rgba(255, 255, 255, 0.2);
   }
-
 
   .features {
     margin: 0 0 40px;
@@ -845,19 +878,19 @@
     height: 50px;
 }
 
-.features-item-ice::before {
+  .features-item-ice::before {
     background: url(../img/feature/icon-ice.svg) no-repeat 50% 50%;
 }
 
-.features-item-cow::before {
+  .features-item-cow::before {
     background: url(../img/feature/icon-cow.svg) no-repeat 50% 50%;
 }
 
-.features-item-leaf::before {
+  .features-item-leaf::before {
     background: url(../img/feature/icon-leaf.svg) no-repeat 50% 50%;
 }
 
-.features-item-thermometer::before {
+  .features-item-thermometer::before {
     background: url(../img/feature/icon-thermometer.svg) no-repeat 50% 50%;
 }
 
@@ -878,7 +911,6 @@
     border-radius: 15px;
   }
 
-
   .subscription-wrapper {
     background-color: rgb(248, 247, 244);
   }
@@ -891,8 +923,7 @@
     color: rgb(50, 50, 50);
   }
 
-
-  .blog-link{
+  .blog-link {
     margin: 0 0 60px;
     display: block;
     width: 280px;
@@ -942,6 +973,7 @@
 
   .map {
     position: relative;
+    z-index: 1;
     padding: 63px 0;
     overflow: hidden;
     font-size: 14px;
@@ -1005,9 +1037,12 @@
     position: fixed;
     width: 100%;
     height: 100%;
+    z-index: 4;
     top: 0;
+    left: 0;
     background-color: rgba(50, 50, 50, 0.3);
   }
+
 
   .feedback-form {
     display: block;
@@ -1017,6 +1052,10 @@
     transform: translate(-50%,-50%);
     width: 477px;
     padding: 18px 25px 25px;
+    z-index: 5;
+    background-color: rgb(248, 247, 244);
+    border-radius: 5px;
+    width: 477px;
 }
 
 .feedback-title {
@@ -1041,6 +1080,8 @@
 .feedback-email {
   display: block;
   width: 265px;
+  margin-bottom: 20px;
+
 }
 
 .feedback-text {
@@ -1109,6 +1150,7 @@
 
 
   .footer-info {
+    position: relative;
     margin: 0;
     padding: 0 0 0 20px;
     display: flex;
@@ -1121,15 +1163,25 @@
   }
 
   .footer-info-title {
-
     flex-basis: 170px;
+
   }
 
-
-  .footer-info a {
-    border-bottom: 1px solid rgba(255,255,255, 0.2);
+  .footer-info-link:focus,
+  .footer-info-link:hover {
+    font-weight: 700;
   }
 
+  .footer-info-title:focus::before,
+  .footer-info-title:hover::before {
+    content: "";
+    background: url(../img/footer/icon-heart.svg) no-repeat;
+    position: absolute;
+    margin-top: 2px;
+    margin-left: -22px;
+    width: 13px;
+    height: 15px;
+}
 
   .copyright {
     margin: 0;
@@ -1183,7 +1235,11 @@
 
 
   .breadcrumbs-link {
+    display: inline-block;
     position: relative;
+    font-size: 14px;
+    line-height: 16px;
+
   }
 
   .breadcrumbs-arrow {
