@@ -23,7 +23,8 @@
             </a>
             <ul class="main-nav-list">
                 <li class="main-nav-item">
-                    <a class="main-nav-link" href="catalog.html"><span class="border-link">Каталог</span>
+                    <a class="main-nav-link" href="catalog.html">
+                      <span class="border-link">Каталог</span>
                     </a>
                     <!-- Выпадающее главное меню -->
                     <div class="dropdown">
@@ -36,15 +37,21 @@
                       </ul>
                     </div>
                 </li>
-                <li class="main-nav-item"><a class="main-nav-link" href="#"><span class="border-link">Дoставка и оплата</span></a></li>
-                <li class="main-nav-item"><a class="main-nav-link" href="#"><span class="border-link">О компании</span></a></li>
+                <li class="main-nav-item">
+                  <a class="main-nav-link" href="#">
+                    <span class="border-link">Дoставка и оплата</span>
+                  </a>
+                </li>
+                <li class="main-nav-item">
+                  <a class="main-nav-link" href="#"><span class="border-link">О Компании</span></a>
+                </li>
             </ul>
         </nav>
         <div class="search">
               <a class="search-link link-dropdown" href="#">Поиск по сайту</a>
               <!-- Выпадающая форма поиска -->
               <form class="search-form dropdown" method="post" action="https://echo.htmlacademy.ru">
-                <input class="search-input input-text" type="search" name="search" placeholder="Что ищем?" arial-label="Найти">
+                <input class="search-input input-text" type="search" name="search" placeholder="Что ищем?">
               </form>
         </div>
         <div class="entry">
@@ -52,9 +59,7 @@
           </a>
               <!-- Выпадающая форма входа -->
           <form class="entry-form dropdown" method="post" action="https://echo.htmlacademy.ru">
-            <label class="visually-hidden" for="user-entry-email">Электронная почта</label>
             <input class="entry-email input-text" type="email" name="entry-email" placeholder="Электронная почта">
-            <label class="visually-hidden" for="user-entry-password">Пароль</label>
             <input class="entry-password input-text" type="password" name="entry-password" placeholder="Пароль">
             <button class="entry-btn button" type="submit">Войти</button>
             <p class="entry-restore-registration">
@@ -130,10 +135,9 @@
                 <p class="products-cost">310<span class="rouble">₽</span></p>
               </div>
               <a class="products-link link" href="catalog.html">
-                <span class="border-link">Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a>
-              <div class="products-substrate">
-                <a class="products-button button" href="#">Добавить в корзину</a>
-              </div>
+                <span class="border-link">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
+              </a>
+              <a class="products-button button" href="#">Добавить в корзину</a>
             </li>
             <li class="hits-item products-item">
               <div class="products-info">
@@ -143,9 +147,7 @@
               <a class="products-link link" href="catalog.html">
                 <span class="border-link">Сливочно-кофейное с кусочками шоколада</span>
               </a>
-              <div class="products-substrate">
-                <a class="products-button button" href="#">Добавить в корзину</a>
-              </div>
+              <a class="products-button button" href="#">Добавить в корзину</a>
             </li>
             <li class="hits-item products-item">
               <div class="products-info">
@@ -155,9 +157,7 @@
               <a class="products-link link" href="catalog.html">
                 <span class="border-link">Сливочно-клубничное с присыпкой из белого шоколада</span>
               </a>
-              <div class="products-substrate">
-                <a class="products-button button" href="#">Добавить в корзину</a>
-              </div>
+              <a class="products-button button" href="#">Добавить в корзину</a>
             </li>
             <li class="hits-item products-item">
               <div class="products-info">
@@ -167,9 +167,7 @@
                 <a class="products-link link" href="catalog.html">
                   <span class="border-link">Сливочное крем-брюле с карамельной подливкой</span>
                 </a>
-                <div class="products-substrate">
-                  <a class="products-button button" href="#">Добавить в корзину</a>
-                </div>
+                <a class="products-button button" href="#">Добавить в корзину</a>
             </li>
           </ul>
         </section>
@@ -209,7 +207,7 @@
                   Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
                 </label>
                 <form class="subscription-form" method="post" action="https://echo.htmlacademy.ru">
-                  <input class="subscription-email input-text" type="email" name="email-for-subscription"  placeholder="Электронная почта" aria-label="Ваша электронная почта">
+                  <input class="subscription-email input-text" type="email" name="email-for-subscription" id="subscription-email" placeholder="Электронная почта" aria-label="Ваша электронная почта">
                   <button class="subscription-submit-btn button" type="submit">Отправить</button>
                 </form>
               </div>
@@ -221,10 +219,10 @@
 
   <section class="map">
     <h2 class="visually-hidden">Месторасположение магазина Глейси на карте</h2>
-      <img class="map-img" src="img/map/map-marker.jpg" alt="ул. Большая Конюшенная 19/8, Санкт-Петербург">
+      <img class="map-img" src="img/map/map-marker.jpg" alt="ул. Большая Конюшенная 19/8, Санкт-Петербург" width="1200" height="430">
       <div class="container">
         <div class="contacts">
-          <p class="contacts-item">Aдрес главного офиса и офлайн-магазина:</p>
+          <p class="contacts-item">Aдрес главного офиса<br> и офлайн-магазина:</p>
           <p class="contacts-address">yл. Большая Конюшенная 19/8, Санкт-Петербург</p>
           <p class="contacts-item">
             Для заказов по телефону:
@@ -262,7 +260,7 @@
       </ul>
     </footer>
   </div>
-  </div>
+    </div>
 
   <!-- Форма обратной связи -->
   <div class="overlay">
@@ -272,12 +270,12 @@
         <b class="feedback-item">Мы обязательно ответим вам!</b>
         <a class="feedback-close" href="#">Закрыть форму обратной связи</a>
       </p>
-      <label class="visually-hidden" for="feedback-name">Имя пользователя</label>
-      <input class="feedback-name input-text" type="text" name="feedback-name" placeholder="Как вас зовут?" aria-label="Как вас зовут?">
+      <label class="visually-hidden" for="feedback-name" >Имя пользователя</label>
+      <input class="feedback-name input-text" type="text" name="feedback-name" id="feedback-name" placeholder="Как вас зовут?" aria-label="Как вас зовут?">
       <label class="visually-hidden" for="feedback-email">Почта пользователя</label>
-      <input class="feedback-email input-text" type="email"  name="feedback-email" placeholder="Ваша почта для ответа?" aria-label="Ваша почта для ответа?">
+      <input class="feedback-email input-text" type="email"  name="feedback-email" id="feedback-email" placeholder="Ваша почта для ответа?" aria-label="Ваша почта для ответа?">
       <label class="visually-hidden" for="feedback-text">Ваше сообщение</label>
-      <textarea class="feedback-text input-text"  name="feedback-text" placeholder="Напишите что-нибудь..."></textarea>
+      <textarea class="feedback-text input-text" id="feedback-text" placeholder="Напишите что-нибудь..."></textarea>
       <button class="feedback-submit-btn button" type="submit">Отправить</button>
     </form>
   </div>
