@@ -82,7 +82,7 @@ a {
   display: block;
   margin-left: 10px;
   margin-bottom: 4px;
-  padding: 8px 16px 8px 44px;
+  padding: 8px 17px 8px 44px;
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
@@ -95,7 +95,7 @@ a {
 .link-dropdown::before {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 56%;
   left: 25px;
   transform: translate(-50%, -50%);
 }
@@ -153,7 +153,7 @@ a {
 }
 
 .header {
-  padding-top: 10px;
+  padding-top: 8px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -589,11 +589,10 @@ li:hover .dropdown {
 
 .slide-title {
   width: 800px;
-  margin: 0 auto;
-  margin-bottom: 27px;
+  margin: 0 auto 28px;
   font-size: 60px;
   line-height: 60px;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .slide-button {
@@ -683,14 +682,14 @@ border-radius: 15px;
 }
 
 .banners-title {
-  margin: 0 0 17px;
+  margin: 0 0 14px;
   font-size: 35px;
   line-height: 41px;
   font-weight: 700;
 }
 
 .banner-info {
-  margin: 0 0 40px;
+  margin: 0 0 43px;
   font-size: 18px;
   line-height: 22px;
   font-weight: 700;
@@ -724,6 +723,10 @@ border-radius: 15px;
   flex-basis: 268px;
 }
 
+.products-item:hover{
+  z-index: 10;
+}
+
 .products-item:hover::after {
   content: "";
   position: absolute;
@@ -737,13 +740,9 @@ border-radius: 15px;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
-.products-item:hover .products-substrate {
-  display: block;
-}
-
 .products-list {
   padding: 0;
-  margin: 0;
+  margin: 0 0 -12px;
   display: flex;
   flex-wrap: wrap;
   text-align: center;
@@ -766,7 +765,7 @@ border-radius: 15px;
 
 .products-link {
   display: block;
-  margin: 20px 0 44px;
+  margin: 15px 0;
   text-align: center;
 }
 
@@ -792,6 +791,7 @@ border-radius: 15px;
   margin: 0;
   font-size: 24px;
   line-height: 30px;
+  letter-spacing: 0.08px;
   color: rgb(50, 50, 50);
 }
 
@@ -809,7 +809,7 @@ border-radius: 15px;
 
 .features-item {
   position: relative;
-  padding: 20px 0 0 57px;
+  padding: 20px 0 0 58px;
   width: 540px;
 }
 
@@ -883,7 +883,7 @@ border-radius: 15px;
 }
 
 .subscription-wrapper {
-  padding: 27px 20px 38px;
+  padding: 30px 20px 36px;
   background-color: rgb(248, 247, 244);
   border-radius: 15px;
 }
@@ -897,7 +897,7 @@ border-radius: 15px;
 }
 
 .subscription-submit-btn {
-  margin-left: 6px;
+  margin-left: 11px;
   color: rgb(255, 255, 255);
   padding: 9px 18px;
 }
@@ -1191,7 +1191,7 @@ border-radius: 15px;
 }
 
 .page-title {
-  margin: 0 0 20px;
+  margin: 0 0 45px;
   font-size: 35px;
   line-height: 41px;
   font-weight: 700;
@@ -1207,7 +1207,9 @@ border-radius: 15px;
 
 .filter-fieldset {
   position: relative;
-  margin-bottom: 0 0 38px 0;
+  margin-left: 0;
+  margin-bottom: 38px;
+  margin-right: 0;
   padding: 9px 15px;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
@@ -1217,7 +1219,7 @@ border-radius: 15px;
 .filter-fieldset-sorting {
   width: 193px;
   margin-right: auto;
-  padding: 8px 0 0 0;
+  padding-top: 8px;
 }
 
 .filter-fieldset-range {
@@ -1238,6 +1240,66 @@ border-radius: 15px;
   left: 13px;
   font-size: 14px;
   line-height: 16px;
+}
+
+.filter-label {
+  position: relative;
+  display: inline-block;
+  margin-left: 45px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.filter-label-fillers {
+  margin-right: 17px;
+  margin-left: 32px;
+}
+
+.filter-label-fat::before,
+.filter-label-fillers::before {
+  content: "";
+  position: absolute;
+  left: -32px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.8;
+}
+
+.filter-label-fat:hover::before,
+.filter__label_fillers:hover::before {
+  opacity: 1;
+}
+
+.filter-label-fat::before {
+  top: -2px;
+  width: 22px;
+  height: 22px;
+  background-image: url(../img/filter/radio-off.svg);
+}
+
+.filter-label-fillers::before {
+  width: 24px;
+  height: 20px;
+  background-image: url(../img/filter/checkbox-off.svg);
+}
+
+.filter-sorting {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  background-image: url(../img/filter/select-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
+  border: 0;
+}
+
+.filter-sorting:focus,
+.filter-sorting:hover {
+    color: rgb(50, 50, 50);
+    background-image: url(../img/filter/select-arrow-on.svg);
 }
 
 .filter-submit {
@@ -1264,6 +1326,91 @@ border-radius: 15px;
   background-color: rgb(234, 234, 234);
   box-shadow: inset 0 2px 1px rgb(105, 105, 105);
   outline: 0;
+}
+
+.filter-pseudo-range {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 176px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.double-range {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter input[type=radio]:focus+label::before {
+  opacity: 1;
+  outline-offset: 2px;
+}
+
+.filter input[type=radio]:checked+label::before {
+  background-image: url(../img/filter/radio-on.svg);
+}
+
+.filter input[type=radio]:disabled+label,
+.filter input[type=radio]:disabled+label::before {
+  opacity: 0.4;
+}
+
+.filter input[type=checkbox]:focus+label::before {
+  opacity: 1;
+  outline: 1px solid #4d90fe;
+  outline-offset: 2px;
+}
+
+.filter input[type=checkbox]:checked+label::before {
+  background-image: url(../img/filter/checkbox-on.svg);
+}
+
+.filter input[type=checkbox]:disabled+label,
+.filter input[type=checkbox]:disabled+label::before {
+  opacity: 0.4;
+}
+
+.double-range-lever {
+  position: relative;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.double-range-lever::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  box-sizing: content-box;
+  width: 4px;
+  height: 4px;
+  border: 8px solid rgb(255, 255, 255);
+  border-radius: 50%;
+}
+
+.double-range-lever:hover::before {
+  border-width: 9px;
+}
+
+.double-range-lever-left {
+  margin-left: 20px;
+}
+
+.double-range-lever-right {
+  margin-right: 53px;
+}
+
+.double-range-square {
+  flex-grow: 1;
+  height: 4px;
+  background-color: rgb(255, 255, 255);
 }
 
 .paginator {
