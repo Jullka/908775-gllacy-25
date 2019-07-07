@@ -588,7 +588,7 @@ li:hover .dropdown {
 }
 
 .slide-title {
-  width: 800px;
+  width: 715px;
   margin: 0 auto 28px;
   font-size: 60px;
   line-height: 60px;
@@ -1200,7 +1200,8 @@ border-radius: 15px;
 .filter-form {
   display: flex;
   flex-wrap: wrap;
-  width: 863px;
+  margin-bottom: 2px;
+  width: 860px;
   font-weight: 500;
   line-height: 18px;
 }
@@ -1302,9 +1303,13 @@ border-radius: 15px;
     background-image: url(../img/filter/select-arrow-on.svg);
 }
 
+.filter-range {
+    width: 100%;
+}
+
 .filter-submit {
   align-self: flex-start;
-  padding: 5px 27px;
+  padding: 7px 28px;
   margin: 0 0 0 auto;
   font-weight: 500;
   color: rgb(255, 255, 255);
@@ -1360,7 +1365,6 @@ border-radius: 15px;
 
 .filter input[type=checkbox]:focus+label::before {
   opacity: 1;
-  outline: 1px solid #4d90fe;
   outline-offset: 2px;
 }
 
